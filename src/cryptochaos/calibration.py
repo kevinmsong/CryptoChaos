@@ -46,7 +46,7 @@ def lcg_low_bit(seed: int, n_bits: int) -> np.ndarray:
 
 
 def legacy_logistic_bits(seed: int, n_bits: int) -> np.ndarray:
-    """Bytes of the v1 8-bit logistic map (finite-state, quickly periodic)."""
+    """Bytes of the 8-bit logistic map of configuration D (finite-state, quickly periodic)."""
     n_bytes = (n_bits + 7) // 8
     out = np.empty(n_bytes, dtype=np.uint8)
     x = seed & 0xFF
@@ -91,7 +91,7 @@ NEGATIVE_CONTROLS = {
     "biased_0.502": "Bernoulli(0.502) bits (PCG64): mild global bias",
     "biased_0.51": "Bernoulli(0.51) bits (PCG64): strong global bias",
     "lcg_low_bit": "low bit of a 31-bit LCG (period 2)",
-    "legacy_logistic": "v1 8-bit logistic-map bytes (finite-state cycle)",
+    "legacy_logistic": "8-bit logistic-map bytes of configuration D (finite-state cycle)",
     "repeated_block": "a 1 KiB ChaCha20 block repeated",
 }
 POSITIVE_CONTROLS = {

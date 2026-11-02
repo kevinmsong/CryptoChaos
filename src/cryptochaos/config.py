@@ -12,8 +12,8 @@ from .errors import ConfigurationError
 from .protocol import SUITES
 
 ALL_PASSES = ("environment", "map_analysis", "auth", "key_sensitivity", "stages", "timing", "diagnostics",
-              "scaling", "kdf_sensitivity", "memory", "calibration", "legacy_reconstruction")
-DEFAULT_PASSES = [p for p in ALL_PASSES if p != "legacy_reconstruction"]
+              "scaling", "kdf_sensitivity", "memory", "calibration")
+DEFAULT_PASSES = list(ALL_PASSES)
 
 DEFAULTS: dict[str, Any] = {
     "experiment": {"name": "unnamed", "description": "", "seed": 20261101, "output_root": "runs",
@@ -72,7 +72,7 @@ def validate(cfg: dict) -> None:
     if cfg["timing"]["repeats"] < 1:
         raise ConfigurationError("timing.repeats must be >= 1")
     sel = cfg["dataset"]["selection"]
-    if not (sel in ("all", "legacy20", "synthetic") or sel.startswith(("first:", "stratified:"))):
+    if not (sel in ("all", "synthetic") or sel.startswith(("first:", "stratified:"))):
         raise ConfigurationError(f"unsupported dataset.selection {sel!r}")
 
 

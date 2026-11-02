@@ -161,7 +161,7 @@ class RunContext:
 
     # --- identity ---------------------------------------------------------------------------
     def _manifest_path(self) -> Path | None:
-        if not {"timing", "diagnostics", "key_sensitivity", "memory", "legacy_reconstruction"} & set(
+        if not {"timing", "diagnostics", "key_sensitivity", "memory"} & set(
                 self.cfg["experiment"]["passes"]):
             return None
         m = self.cfg["dataset"]["manifest"]

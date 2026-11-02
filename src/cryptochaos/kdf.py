@@ -1,11 +1,11 @@
-"""Password derivation, IKM encoding, domain separation, and the CryptoChaos-v2 key schedule.
+"""Password derivation, IKM encoding, domain separation, and the CryptoChaos key schedule.
 
 Key schedule for KEM suites (C-F)::
 
     k_kem       = BLAKE3(ss)                                   # 32 bytes; fixed-length encoding of ss
     pw_key      = scrypt(NFC-UTF8(password), pw_salt, N, r, p, 32)          # suites E, F
     chaos_value = v2_chaos_value(pw_key)                                     # suite F only
-    legacy      = legacy_chaotic_key(password)                               # suite D only
+    d_value     = legacy_chaotic_key(password)                               # suite D only
     IKM         = "CryptoChaos-v2/IKM" || u8(version) || u8(suite) || u8(n_fields)
                   || for each field: u8(tag) || u16be(len) || value
     AEAD key    = HKDF-SHA256(IKM, salt=hkdf_salt, info=INFO(version, suite), L=32)

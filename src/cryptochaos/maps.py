@@ -1,10 +1,11 @@
-"""Deterministic chaotic maps: the frozen legacy (v1) pathway and the exact-integer v2 maps.
+"""Deterministic chaotic maps: the 8-bit negative-control maps (configuration D) and the exact-integer
+CryptoChaos maps (configuration F).
 
 Neither pathway adds entropy. Each output is a deterministic function of its input:
 
-* Legacy (suite D): five bytes of ``BLAKE3(passphrase)`` seed four 8-bit maps. The output can
+* Configuration D (negative control): five bytes of ``BLAKE3(passphrase)`` seed four 8-bit maps. The output can
   take at most 2**40 values, and far fewer in practice (see ``map_analysis``).
-* v2 (suite F): the full 32-byte scrypt password key seeds four 64-bit exact-integer maps. The
+* CryptoChaos (configuration F): the full 32-byte scrypt password key seeds four 64-bit exact-integer maps. The
   resulting value is appended to (never substituted for) the password key in the key schedule.
 
 All arithmetic is on Python integers with explicitly specified floor division, so outputs are
@@ -18,7 +19,7 @@ from fractions import Fraction
 import blake3
 
 # ---------------------------------------------------------------------------------------------
-# Legacy v1 maps (reproduced exactly from legacy/src/cryptochaos_benchmark.py)
+# Negative-control maps (configuration D): 8-bit fixed point, seeded from five passphrase-digest bytes
 # ---------------------------------------------------------------------------------------------
 
 LEGACY_OUTPUT_BYTES = 32
@@ -32,10 +33,10 @@ LEGACY_CHEBYSHEV_DEGREE = 5
 def legacy_chebyshev_lut_exact() -> tuple[int, ...]:
     """The 256-entry table floor((T5((2k-255)/255) + 1) * 255/2) mod 256 in exact rationals.
 
-    v1 built this table at run time as ``int((cos(5*arccos(2k/255 - 1)) + 1) * 127.5) & 0xFF``
+    The 8-bit design builds this table at run time as ``int((cos(5*arccos(2k/255 - 1)) + 1) * 127.5) & 0xFF``
     in floating point. cos(5 arccos x) is the Chebyshev polynomial T5(x) = 16x^5 - 20x^3 + 5x,
     so the exact rational evaluation is the platform-independent definition. It equals the
-    floating-point table produced on the audit platform for all 256 entries (see tests); entries
+    floating-point table on the reference platform for all 256 entries (see tests); entries
     k=0 and k=255 lie exactly on integer boundaries, where floating-point evaluation could differ
     across platforms.
     """
@@ -84,7 +85,7 @@ def legacy_tent_step(x: int) -> int:
 
 
 def legacy_henon_step(x: int, y: int) -> tuple[int, int]:
-    # Python's >> floors negative operands; v1 relied on that behaviour.
+    # Python's >> floors negative operands; the 8-bit design relies on that behavior.
     x_new = ((LEGACY_HENON_A_FIXED * (128 - ((x * x) >> 8))) >> 7) + y
     y_new = (LEGACY_HENON_B_FIXED * x) >> 8
     return x_new & 0xFF, y_new & 0xFF
@@ -121,13 +122,13 @@ def legacy_henon(size: int, x0: int, y0: int) -> bytes:
 
 
 def legacy_seed(passphrase: str) -> bytes:
-    """The only passphrase information v1 used: the first five bytes of BLAKE3(UTF-8 passphrase)."""
+    """The only passphrase information configuration D uses: the first five bytes of BLAKE3(UTF-8 passphrase)."""
     return blake3.blake3(passphrase.encode("utf-8")).digest()[:5]
 
 
 def legacy_map_outputs(seed: bytes) -> tuple[bytes, bytes, bytes, bytes]:
     if len(seed) != 5:
-        raise ValueError("legacy seed is exactly 5 bytes")
+        raise ValueError("the configuration D seed is exactly 5 bytes")
     h0, h1, h2, h3, h4 = seed
     return (
         legacy_logistic(LEGACY_OUTPUT_BYTES, h0),
@@ -142,12 +143,12 @@ def legacy_chaotic_key_from_seed(seed: bytes) -> bytes:
 
 
 def legacy_chaotic_key(passphrase: str) -> bytes:
-    """v1 ``CryptoChaos._generate_chaotic_key``: a function of five passphrase-digest bytes only."""
+    """Configuration D's chaotic key: a function of five passphrase-digest bytes only."""
     return legacy_chaotic_key_from_seed(legacy_seed(passphrase))
 
 
 # ---------------------------------------------------------------------------------------------
-# v2 exact-integer maps (suite F)
+# Exact-integer maps of CryptoChaos (configuration F)
 # ---------------------------------------------------------------------------------------------
 
 V2_WORD_BITS = 64
@@ -158,7 +159,7 @@ V2_VALUE_LABEL = b"CryptoChaos-v2/chaos-value"
 
 
 class V2Maps:
-    """The v2 maps on W-bit unsigned states (W=64 in the protocol; smaller W for analysis only).
+    """The configuration F maps on W-bit unsigned states (W=64 in the protocol; smaller W for analysis only).
 
     With M = 2**W:
 
@@ -235,7 +236,7 @@ _V2 = V2Maps(V2_WORD_BITS)
 def v2_seed_words(pw_key: bytes) -> tuple[int, int, int, int, int]:
     """Five 64-bit big-endian words from BLAKE3(label || pw_key) (domain-separated seeding)."""
     if len(pw_key) != 32:
-        raise ValueError("v2 maps are seeded from the full 32-byte password key")
+        raise ValueError("the configuration F maps are seeded from the full 32-byte password key")
     material = blake3.blake3(V2_SEED_LABEL + pw_key).digest(length=40)
     return tuple(int.from_bytes(material[8 * i : 8 * i + 8], "big") for i in range(5))  # type: ignore[return-value]
 

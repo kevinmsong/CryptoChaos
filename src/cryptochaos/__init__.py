@@ -1,4 +1,4 @@
-"""CryptoChaos-v2: passphrase-bound ML-KEM-1024/AEAD envelopes with optional chaotic diversification.
+"""CryptoChaos: passphrase-bound ML-KEM-1024/AEAD envelopes with optional chaotic diversification.
 
 Public API::
 
@@ -25,7 +25,7 @@ from .kem import DEFAULT_KEM_BACKEND, RecipientKeyPair, get_kem_backend
 from .protocol import SUITES, VERSION, PasswordSession, Receiver, Sender, envelope_overhead
 
 __version__ = "2.0.0"
-PROTOCOL_NAME = "CryptoChaos-v2"
+PROTOCOL_NAME = "CryptoChaos"
 
 
 def generate_recipient_keypair(kem_backend: str = DEFAULT_KEM_BACKEND) -> RecipientKeyPair:

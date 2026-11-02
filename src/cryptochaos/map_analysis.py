@@ -1,8 +1,9 @@
-"""Finite-state analysis of the legacy maps (exhaustive) and the v2 maps (reduced precision + sampling).
+"""Finite-state analysis of the configuration D maps (exhaustive) and the CryptoChaos maps (reduced
+precision plus sampling).
 
 These bounds concern the map component only. They are not an attack cost for the complete
-KEM/AEAD system: in v1 they bound the diversity of the passphrase-derived value; in v2 the full
-scrypt key enters the key schedule regardless of map behaviour.
+KEM/AEAD system: in configuration D they bound the diversity of the passphrase-derived value; in
+CryptoChaos the full scrypt key enters the key schedule regardless of map behavior.
 """
 from __future__ import annotations
 
@@ -91,14 +92,14 @@ def legacy_analysis() -> dict[str, Any]:
         "min_entropy_bits_uniform_seed": min_ent,
         "collision_probability": coll,
         "expected_random_passphrases_to_first_collision": math.sqrt(math.pi / (2 * coll)),
-        "note": "Upper bounds on the diversity of the v1 passphrase-derived value; BLAKE3 assumed collision-free.",
+        "note": "Upper bounds on the diversity of configuration D's passphrase-derived value; BLAKE3 assumed collision-free.",
     }
     out["collision_search"] = legacy_collision_search()
     return out
 
 
 def legacy_collision_search(prefix: str = "cryptochaos-demo-", limit: int = 4_000_000) -> dict[str, Any]:
-    """Birthday search for two passphrases with identical v1 chaotic keys (and identical seeds)."""
+    """Birthday search for two passphrases with identical configuration D chaotic keys (and identical seeds)."""
     def classes(fn, seeds):
         ids: dict[bytes, int] = {}
         return {s: ids.setdefault(fn(s), len(ids)) for s in seeds}

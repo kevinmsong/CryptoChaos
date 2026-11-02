@@ -1,4 +1,4 @@
-"""Exception hierarchy for the CryptoChaos-v2 package.
+"""Exception hierarchy for the CryptoChaos package.
 
 Format errors are raised for problems that are visible in the public envelope
 structure (they reveal nothing secret). Every cryptographic failure after

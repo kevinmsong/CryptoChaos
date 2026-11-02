@@ -1,4 +1,4 @@
-"""CryptoChaos-v2 authenticated envelope (protocol version 2).
+"""CryptoChaos authenticated envelope (wire-format version 2).
 
 Wire format (all integers big-endian)::
 
@@ -76,9 +76,9 @@ SUITES: dict[str, Suite] = {
     "A": Suite(0x01, "A", "AES-256-GCM, pre-established key", False, AEAD_AES_GCM, None),
     "B": Suite(0x02, "B", "ChaCha20-Poly1305, pre-established key", False, AEAD_CHACHA, None),
     "C": Suite(0x10, "C", "ML-KEM-1024 + HKDF-SHA256 + AES-256-GCM", True, AEAD_AES_GCM, None),
-    "D": Suite(0x11, "D", "C + legacy chaotic password diversification", True, AEAD_AES_GCM, "legacy-chaos"),
+    "D": Suite(0x11, "D", "C + truncated-seed chaotic value (negative control)", True, AEAD_AES_GCM, "legacy-chaos"),
     "E": Suite(0x12, "E", "C + scrypt password key", True, AEAD_AES_GCM, "scrypt"),
-    "F": Suite(0x13, "F", "C + scrypt password key + v2 chaotic value", True, AEAD_AES_GCM, "scrypt+chaos"),
+    "F": Suite(0x13, "F", "E + chaotic value (CryptoChaos)", True, AEAD_AES_GCM, "scrypt+chaos"),
 }
 SUITES_BY_ID: dict[int, Suite] = {s.suite_id: s for s in SUITES.values()}
 
@@ -184,7 +184,7 @@ def parse_envelope(
     view = memoryview(envelope)
     r = _Reader(view)
     if r.take(4) != MAGIC:
-        raise UnsupportedVersionError("not a CryptoChaos-v2 envelope (bad magic)")
+        raise UnsupportedVersionError("not a CryptoChaos envelope (bad magic)")
     version, suite_id, flags, reserved = struct.unpack(">BBBB", r.take(4))
     if version != VERSION:
         raise UnsupportedVersionError(f"unsupported protocol version {version}")
@@ -253,8 +253,8 @@ class PasswordSession:
 
     For suites E/F the session fixes one password salt and derives ``pw_key`` (and the F chaos
     value) once; every envelope in the session carries the same salt and parameters, so a
-    receiver holding the same session skips scrypt. For suite D the session caches the legacy
-    chaotic key. Caching trades per-message KDF cost for linkability of envelopes within the
+    receiver holding the same session skips scrypt. For suite D the session caches the
+    truncated-seed chaotic key. Caching trades per-message KDF cost for linkability of envelopes within the
     session; it is a declared workload, never a hidden optimization.
     """
 
@@ -268,7 +268,7 @@ class PasswordSession:
         self.legacy_value = None
         if self.suite.password == "legacy-chaos":
             if not isinstance(password, str):
-                raise TypeError("suite D (legacy) takes a str passphrase")
+                raise TypeError("suite D takes a str passphrase")
             self.legacy_value = legacy_chaotic_key(password)
         elif self.suite.uses_scrypt:
             self.pw_salt = pw_salt if pw_salt is not None else os.urandom(kdf.PW_SALT_BYTES)
@@ -305,7 +305,7 @@ def _password_fields(suite: Suite, password: str | bytes | None, header_scrypt: 
         raise ValueError(f"suite {suite.code} requires a password")
     if suite.password == "legacy-chaos":
         if not isinstance(password, str):
-            raise TypeError("suite D (legacy) takes a str passphrase")
+            raise TypeError("suite D takes a str passphrase")
         return [(kdf.FIELD_LEGACY_CHAOS, legacy_chaotic_key(password))]
     pw_key = kdf.derive_password_key(kdf.encode_password(password), pw_salt, header_scrypt)
     fields = [(kdf.FIELD_PW_KEY, pw_key)]

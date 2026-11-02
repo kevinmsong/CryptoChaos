@@ -403,7 +403,7 @@ def pass_auth(ctx: RunContext) -> dict[str, Any]:
                         bad[off + 1] = int(rng.choice([0, 1, 10, 13, 19, 20, 31, 63, 255]))
                     expected = "accept" if case == "valid" else "reject"
                     if case == "legacy_collision_password" and code == "D":
-                        expected = "reject (v1 accepts: documented weakness)"
+                        expected = "reject (D accepts: negative control)"
                     try:
                         out = receiver.open(bytes(bad), password=password, aad=use_aad)
                         outcome, detail, released = "accepted", "", out == payload
@@ -763,82 +763,6 @@ def pass_calibration(ctx: RunContext) -> dict[str, Any]:
 
 
 # ---------------------------------------------------------------------------------------------
-# historical reconstruction: v1 code paths re-timed under v2 conventions (bridge run only)
-# ---------------------------------------------------------------------------------------------
-
-LEGACY_COLUMNS = ["key", "image_id", "repeat", "order_position", "wrapper", "payload_bytes", "encrypt_ns",
-                  "decrypt_ns", "ok", "error", "wall_time_utc"]
-
-
-def _legacy_wrappers(root: Path) -> dict[str, tuple[Callable[[bytes], Any], Callable[[Any], bytes]]]:
-    """Exact v1 behaviour: the unmodified v1 CryptoChaos class plus faithful copies of two v1 wrappers."""
-    import importlib.util
-
-    import blake3
-    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-    from kyber_py.ml_kem import ML_KEM_1024
-
-    spec = importlib.util.spec_from_file_location("legacy_v1", root / "legacy" / "src" / "cryptochaos_benchmark.py")
-    v1 = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(v1)
-    cc = v1.CryptoChaosOptimized("benchmark_passphrase_2025")
-    ek, dk = ML_KEM_1024.keygen()  # v1 W_MLKEM: key pair generated once, reused
-    aes_key = os.urandom(32)
-
-    def pure_enc(pt: bytes):
-        k, c = ML_KEM_1024.encaps(ek)
-        n = os.urandom(12)
-        return AESGCM(blake3.blake3(k).digest(length=32)).encrypt(n, pt, None), (n, c)
-
-    def pure_dec(state):
-        ct, (n, c) = state
-        return AESGCM(blake3.blake3(ML_KEM_1024.decaps(dk, c)).digest(length=32)).decrypt(n, ct, None)
-
-    def aes_enc(pt: bytes):
-        n = os.urandom(12)
-        return AESGCM(aes_key).encrypt(n, pt, None), n
-
-    def aes_dec(state):
-        ct, n = state
-        return AESGCM(aes_key).decrypt(n, ct, None)
-
-    return {
-        "v1 CryptoChaos-Kyber1024 (keygen per message, kyber-py)": (cc.encrypt, lambda s: cc.decrypt(*s)),
-        "v1 Kyber1024-Pure (reused keys, kyber-py)": (pure_enc, pure_dec),
-        "v1 AES-256-GCM": (aes_enc, aes_dec),
-    }
-
-
-def pass_legacy_reconstruction(ctx: RunContext) -> dict[str, Any]:
-    cfg = ctx.cfg
-    wrappers = _legacy_wrappers(ctx.root)
-    names = list(wrappers)
-    n = 0
-    with ctx.sink("legacy_reconstruction", LEGACY_COLUMNS) as sink:
-        for idx, rec in enumerate(ctx.images):
-            payload = None
-            for rep in range(1, cfg["timing"]["repeats"] + 1):
-                order = [names[i] for i in order_rng(cfg["experiment"]["seed"], 8, idx, rep).permutation(len(names))]
-                for pos, name in enumerate(order):
-                    key = f"{rec.image_id}|{rep}|{name}"
-                    if key in sink.keys:
-                        continue
-                    payload = payload if payload is not None else load_payload(ctx, rec)
-                    enc, dec = wrappers[name]
-                    row = {"key": key, "image_id": rec.image_id, "repeat": rep, "order_position": pos, "wrapper": name,
-                           "payload_bytes": len(payload), "wall_time_utc": utc_now()}
-                    try:
-                        state, t_enc = _timed(lambda: enc(payload))
-                        out, t_dec = _timed(lambda: dec(state))
-                        row.update({"encrypt_ns": t_enc, "decrypt_ns": t_dec, "ok": out == payload})
-                    except Exception as exc:  # noqa: BLE001
-                        row["ok"], row["error"] = False, f"{type(exc).__name__}: {exc}"
-                    sink.write(row)
-                    n += 1
-    return {"rows_written_this_session": n}
-
-
-# ---------------------------------------------------------------------------------------------
 # driver
 # ---------------------------------------------------------------------------------------------
 
@@ -861,7 +785,7 @@ PASSES: dict[str, Callable[[RunContext], dict[str, Any]]] = {
     "environment": pass_environment, "map_analysis": pass_map_analysis, "auth": pass_auth,
     "key_sensitivity": pass_key_sensitivity, "stages": pass_stages, "timing": pass_timing,
     "diagnostics": pass_diagnostics, "scaling": pass_scaling, "kdf_sensitivity": pass_kdf_sensitivity,
-    "memory": pass_memory, "calibration": pass_calibration, "legacy_reconstruction": pass_legacy_reconstruction,
+    "memory": pass_memory, "calibration": pass_calibration,
 }
 
 
@@ -885,11 +809,6 @@ def expected_keys(ctx: RunContext, name: str) -> set[str] | None:
                 for c in codes}
     if name == "calibration":
         return {f"{s.kind}|{s.index}" for s in calibration_specs(cfg)}
-    if name == "legacy_reconstruction":
-        names = ["v1 CryptoChaos-Kyber1024 (keygen per message, kyber-py)", "v1 Kyber1024-Pure (reused keys, kyber-py)",
-                 "v1 AES-256-GCM"]
-        return {f"{r.image_id}|{rep}|{w}" for r in ctx.images for rep in range(1, cfg["timing"]["repeats"] + 1)
-                for w in names}
     if name == "key_sensitivity":
         ids = [r.image_id for r in ctx.images[: cfg["key_sensitivity"]["images"]]]
         keys = {f"{i}|{c}|{v}" for i in ids for c in suites for v in keysens_variations(c)}

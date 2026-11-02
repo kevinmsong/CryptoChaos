@@ -77,6 +77,7 @@ python -m cryptochaos doctor
 python -m cryptochaos benchmark --config configs/principal.toml --resume
 python -m cryptochaos report --run results/principal
 python -m cryptochaos verify-artifact --run results/principal
+python scripts/supplementary_run.py --out results/supplement-new
 ```
 
 `verify-artifact` checks completeness, SHA-256 sums, and secret hygiene, and it identifies the commit
@@ -91,7 +92,7 @@ whose measurement code produced each run. The experiment design and analysis pla
 | `tests/` | Unit, vector (NIST ACVP ML-KEM, RFC 7914, RFC 5869, NIST STS), protocol, harness, and GPU parity tests |
 | `configs/` | Experiment configuration and the dataset manifest |
 | `results/` | Raw observations, run identities, environment records, SHA-256 sums, and generated reports |
-| `scripts/` | Run driver, STS reference-vector builder, GPU results table |
+| `scripts/` | Run driver, supplementary run, STS reference-vector builder, GPU results table |
 | `docs/` | Protocol specification, threat model, security components, methodology, reproduction, limitations |
 
 ## License

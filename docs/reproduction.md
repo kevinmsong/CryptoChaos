@@ -24,6 +24,7 @@ python -m cryptochaos benchmark --config configs/smoke.toml
 python -m cryptochaos benchmark --config configs/principal.toml --resume
 python -m cryptochaos report --run results/principal
 python -m cryptochaos verify-artifact --run results/principal
+python scripts/supplementary_run.py --out results/supplement-new
 ```
 
 ## Linux / WSL2
@@ -56,9 +57,10 @@ stored locally first. `doctor` reports how many files are hydrated.
 Each run's `run.json` stores `measurement_source_sha256`, a SHA-256 over every module in
 `src/cryptochaos/` except reporting, CLI, artifact checking, and the GPU kernels. `verify-artifact`
 recomputes it for the current code. If the code has changed since the run, it searches this
-repository's history for the commit whose measurement code has the recorded hash and names it. The
-development commit recorded in `run.json` (`711dbf8`; `1b0a91a` for the GPU record) is not part of
-this repository's history.
+repository's history for the commit whose measurement code has the recorded hash and names it: for the
+principal run that is commit `1d41872`, whose measurement code is identical to the code that produced
+it. The development commit recorded in `run.json` (`711dbf8`; `1b0a91a` for the GPU record) is not
+part of this repository's history.
 
 ## Timing hygiene
 

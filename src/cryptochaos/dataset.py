@@ -20,9 +20,6 @@ from PIL import Image
 
 from .errors import ConfigurationError
 
-LEGACY_MANIFEST = "legacy/results/20260314_141838/csv/dataset_manifest.csv"
-
-
 @dataclass(frozen=True)
 class ImageRecord:
     image_id: str
@@ -35,8 +32,6 @@ class ImageRecord:
     pixels: int
     payload_bytes: int
     decoded_sha256: str
-    legacy20: bool
-    legacy_category: str
 
 
 def decode_rgb(path: str | Path) -> np.ndarray:
@@ -79,14 +74,7 @@ def resolve_dataset_path(cfg_dataset: dict) -> Path:
     raise ConfigurationError("dataset directory not found; set CRYPTOCHAOS_DIV2K_PATH (or dataset.path)")
 
 
-def legacy_selection(root: Path) -> dict[str, str]:
-    path = root / LEGACY_MANIFEST
-    with path.open(newline="", encoding="utf-8") as fh:
-        return {row["filename"]: row["category"] for row in csv.DictReader(fh)}
-
-
 def build_manifest(image_dir: Path, root: Path, pattern: str = "*.png") -> list[ImageRecord]:
-    legacy = legacy_selection(root)
     records = []
     for p in sorted(image_dir.glob(pattern)):
         if not p.is_file():
@@ -98,8 +86,7 @@ def build_manifest(image_dir: Path, root: Path, pattern: str = "*.png") -> list[
         records.append(ImageRecord(
             image_id=p.stem, filename=p.name, file_bytes=p.stat().st_size, file_sha256=sha256_file(p),
             width=arr.shape[1], height=arr.shape[0], source_mode=mode, pixels=arr.shape[0] * arr.shape[1],
-            payload_bytes=len(payload), decoded_sha256=hashlib.sha256(payload).hexdigest(),
-            legacy20=p.name in legacy, legacy_category=legacy.get(p.name, "")))
+            payload_bytes=len(payload), decoded_sha256=hashlib.sha256(payload).hexdigest()))
     return records
 
 
@@ -120,8 +107,7 @@ def read_manifest(path: Path) -> list[ImageRecord]:
                 image_id=row["image_id"], filename=row["filename"], file_bytes=int(row["file_bytes"]),
                 file_sha256=row["file_sha256"], width=int(row["width"]), height=int(row["height"]),
                 source_mode=row["source_mode"], pixels=int(row["pixels"]), payload_bytes=int(row["payload_bytes"]),
-                decoded_sha256=row["decoded_sha256"], legacy20=row["legacy20"] == "True",
-                legacy_category=row["legacy_category"]))
+                decoded_sha256=row["decoded_sha256"]))
     return out
 
 
@@ -133,10 +119,6 @@ def select(records: list[ImageRecord], rule: str, root: Path | None = None) -> l
     """Prespecified selection rules; none depends on algorithm results."""
     if rule == "all":
         return list(records)
-    if rule == "legacy20":
-        order = list(legacy_selection(root or Path.cwd()))
-        by_name = {r.filename: r for r in records}
-        return [by_name[name] for name in order]
     if rule.startswith("first:"):
         return list(records[: int(rule.split(":", 1)[1])])
     if rule.startswith("stratified:"):
