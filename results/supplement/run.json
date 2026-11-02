@@ -1,0 +1,18 @@
+{
+ "started_at_utc": "2026-11-02T14:09:47Z",
+ "argv": [
+  "--out",
+  "results/supplement"
+ ],
+ "source": {
+  "git_commit": "15e76ce9e1c3c9daf158518e4d22401aced077a8",
+  "git_dirty": false,
+  "dirty_patch_sha256": null,
+  "package_source_sha256": "f3f3467998fffe34906c3a04c84939f35b65ebaa5eaa7672c91c8f1a10de9132",
+  "measurement_source_sha256": "2d3c772c14ff3897a9d6beaa52fbb9e15dd89f489339eeb2be3391471bc1bee0"
+ },
+ "script_sha256": "ac14ba0d200726f13ba9a46ca0442523cd7c16d4c732819115dbe77e132ee04f",
+ "seed_purpose": "orders cold-start processes and serialization batches and chooses tamper positions; never cryptographic",
+ "finished_at_utc": "2026-11-02T14:10:13Z",
+ "errors": 0
+}

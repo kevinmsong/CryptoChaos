@@ -205,5 +205,9 @@ payloads, and drives bootstrap resampling. All cryptographic randomness comes fr
   corrected. This document now describes the warm-up, the first-call log, CPU sampling, the
   key-sensitivity inputs, the bootstrap pairing, and the completeness checks as implemented.
 
-- **2026-11-02, repository layout.** The run output moved to `results/principal` (recorded in
-  `run.json`; observations unchanged).
+- **2026-11-02, repository layout and supplementary run.** The run output moved to
+  `results/principal` (recorded in `run.json`; observations unchanged). A
+  supplementary run (`scripts/supplementary_run.py`) adds process cold start, header encoding and
+  parsing (the principal run timed parsing only, as one stage), and header tampering stratified by
+  field. It ran with the unrelated workload suspended and the cloud-sync client running; its CPU load
+  is recorded once per second in `raw/load.csv`.

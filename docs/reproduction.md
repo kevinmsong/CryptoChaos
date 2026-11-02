@@ -60,7 +60,8 @@ recomputes it for the current code. If the code has changed since the run, it se
 repository's history for the commit whose measurement code has the recorded hash and names it: for the
 principal run that is commit `1d41872`, whose measurement code is identical to the code that produced
 it. The development commit recorded in `run.json` (`711dbf8`; `1b0a91a` for the GPU record) is not
-part of this repository's history.
+part of this repository's history. The supplementary run (`results/supplement`) records the commit and
+code hash of the version that produced it.
 
 ## Timing hygiene
 

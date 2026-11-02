@@ -1,0 +1,1065 @@
+suite,field,field_bits,trial,byte,bit,outcome,plaintext_released,output_matches
+A,format identifier,32,0,1,6,UnsupportedVersionError,False,False
+A,format identifier,32,1,1,1,UnsupportedVersionError,False,False
+A,format identifier,32,2,1,2,UnsupportedVersionError,False,False
+A,format identifier,32,3,2,3,UnsupportedVersionError,False,False
+A,format identifier,32,4,0,7,UnsupportedVersionError,False,False
+A,format identifier,32,5,0,5,UnsupportedVersionError,False,False
+A,format identifier,32,6,1,0,UnsupportedVersionError,False,False
+A,format identifier,32,7,2,7,UnsupportedVersionError,False,False
+A,format identifier,32,8,2,1,UnsupportedVersionError,False,False
+A,format identifier,32,9,0,4,UnsupportedVersionError,False,False
+A,format identifier,32,10,2,2,UnsupportedVersionError,False,False
+A,format identifier,32,11,0,6,UnsupportedVersionError,False,False
+A,format identifier,32,12,1,7,UnsupportedVersionError,False,False
+A,format identifier,32,13,3,5,UnsupportedVersionError,False,False
+A,format identifier,32,14,3,0,UnsupportedVersionError,False,False
+A,format identifier,32,15,2,4,UnsupportedVersionError,False,False
+A,format identifier,32,16,1,3,UnsupportedVersionError,False,False
+A,format identifier,32,17,3,6,UnsupportedVersionError,False,False
+A,format identifier,32,18,3,2,UnsupportedVersionError,False,False
+A,format identifier,32,19,1,5,UnsupportedVersionError,False,False
+A,version,8,0,4,0,UnsupportedVersionError,False,False
+A,version,8,1,4,1,UnsupportedVersionError,False,False
+A,version,8,2,4,2,UnsupportedVersionError,False,False
+A,version,8,3,4,3,UnsupportedVersionError,False,False
+A,version,8,4,4,4,UnsupportedVersionError,False,False
+A,version,8,5,4,5,UnsupportedVersionError,False,False
+A,version,8,6,4,6,UnsupportedVersionError,False,False
+A,version,8,7,4,7,UnsupportedVersionError,False,False
+A,configuration,8,0,5,0,UnsupportedSuiteError,False,False
+A,configuration,8,1,5,1,UnsupportedSuiteError,False,False
+A,configuration,8,2,5,2,UnsupportedSuiteError,False,False
+A,configuration,8,3,5,3,UnsupportedSuiteError,False,False
+A,configuration,8,4,5,4,UnsupportedSuiteError,False,False
+A,configuration,8,5,5,5,UnsupportedSuiteError,False,False
+A,configuration,8,6,5,6,UnsupportedSuiteError,False,False
+A,configuration,8,7,5,7,UnsupportedSuiteError,False,False
+A,flags and reserved,16,0,6,0,EnvelopeFormatError,False,False
+A,flags and reserved,16,1,6,1,EnvelopeFormatError,False,False
+A,flags and reserved,16,2,6,2,EnvelopeFormatError,False,False
+A,flags and reserved,16,3,6,3,EnvelopeFormatError,False,False
+A,flags and reserved,16,4,6,4,EnvelopeFormatError,False,False
+A,flags and reserved,16,5,6,5,EnvelopeFormatError,False,False
+A,flags and reserved,16,6,6,6,EnvelopeFormatError,False,False
+A,flags and reserved,16,7,6,7,EnvelopeFormatError,False,False
+A,flags and reserved,16,8,7,0,EnvelopeFormatError,False,False
+A,flags and reserved,16,9,7,1,EnvelopeFormatError,False,False
+A,flags and reserved,16,10,7,2,EnvelopeFormatError,False,False
+A,flags and reserved,16,11,7,3,EnvelopeFormatError,False,False
+A,flags and reserved,16,12,7,4,EnvelopeFormatError,False,False
+A,flags and reserved,16,13,7,5,EnvelopeFormatError,False,False
+A,flags and reserved,16,14,7,6,EnvelopeFormatError,False,False
+A,flags and reserved,16,15,7,7,EnvelopeFormatError,False,False
+A,nonce length,8,0,8,0,EnvelopeFormatError,False,False
+A,nonce length,8,1,8,1,EnvelopeFormatError,False,False
+A,nonce length,8,2,8,2,EnvelopeFormatError,False,False
+A,nonce length,8,3,8,3,EnvelopeFormatError,False,False
+A,nonce length,8,4,8,4,EnvelopeFormatError,False,False
+A,nonce length,8,5,8,5,EnvelopeFormatError,False,False
+A,nonce length,8,6,8,6,EnvelopeFormatError,False,False
+A,nonce length,8,7,8,7,EnvelopeFormatError,False,False
+A,nonce,96,0,14,6,DecryptionError,False,False
+A,nonce,96,1,12,6,DecryptionError,False,False
+A,nonce,96,2,9,3,DecryptionError,False,False
+A,nonce,96,3,13,6,DecryptionError,False,False
+A,nonce,96,4,17,2,DecryptionError,False,False
+A,nonce,96,5,18,5,DecryptionError,False,False
+A,nonce,96,6,15,6,DecryptionError,False,False
+A,nonce,96,7,11,5,DecryptionError,False,False
+A,nonce,96,8,16,1,DecryptionError,False,False
+A,nonce,96,9,17,6,DecryptionError,False,False
+A,nonce,96,10,13,0,DecryptionError,False,False
+A,nonce,96,11,9,2,DecryptionError,False,False
+A,nonce,96,12,12,3,DecryptionError,False,False
+A,nonce,96,13,11,4,DecryptionError,False,False
+A,nonce,96,14,12,5,DecryptionError,False,False
+A,nonce,96,15,14,1,DecryptionError,False,False
+A,nonce,96,16,16,3,DecryptionError,False,False
+A,nonce,96,17,15,2,DecryptionError,False,False
+A,nonce,96,18,16,2,DecryptionError,False,False
+A,nonce,96,19,16,5,DecryptionError,False,False
+A,ciphertext length,64,0,22,0,LengthLimitError,False,False
+A,ciphertext length,64,1,28,5,EnvelopeFormatError,False,False
+A,ciphertext length,64,2,25,0,EnvelopeFormatError,False,False
+A,ciphertext length,64,3,25,6,LengthLimitError,False,False
+A,ciphertext length,64,4,22,5,LengthLimitError,False,False
+A,ciphertext length,64,5,27,7,EnvelopeFormatError,False,False
+A,ciphertext length,64,6,25,4,EnvelopeFormatError,False,False
+A,ciphertext length,64,7,24,4,LengthLimitError,False,False
+A,ciphertext length,64,8,21,7,LengthLimitError,False,False
+A,ciphertext length,64,9,23,7,LengthLimitError,False,False
+A,ciphertext length,64,10,21,0,LengthLimitError,False,False
+A,ciphertext length,64,11,23,2,LengthLimitError,False,False
+A,ciphertext length,64,12,25,2,EnvelopeFormatError,False,False
+A,ciphertext length,64,13,28,7,EnvelopeFormatError,False,False
+A,ciphertext length,64,14,28,0,EnvelopeFormatError,False,False
+A,ciphertext length,64,15,21,2,LengthLimitError,False,False
+A,ciphertext length,64,16,23,5,LengthLimitError,False,False
+A,ciphertext length,64,17,26,0,EnvelopeFormatError,False,False
+A,ciphertext length,64,18,23,3,LengthLimitError,False,False
+A,ciphertext length,64,19,28,6,EnvelopeFormatError,False,False
+B,format identifier,32,0,2,1,UnsupportedVersionError,False,False
+B,format identifier,32,1,2,6,UnsupportedVersionError,False,False
+B,format identifier,32,2,1,7,UnsupportedVersionError,False,False
+B,format identifier,32,3,0,1,UnsupportedVersionError,False,False
+B,format identifier,32,4,3,2,UnsupportedVersionError,False,False
+B,format identifier,32,5,2,0,UnsupportedVersionError,False,False
+B,format identifier,32,6,1,4,UnsupportedVersionError,False,False
+B,format identifier,32,7,3,6,UnsupportedVersionError,False,False
+B,format identifier,32,8,3,4,UnsupportedVersionError,False,False
+B,format identifier,32,9,1,6,UnsupportedVersionError,False,False
+B,format identifier,32,10,0,0,UnsupportedVersionError,False,False
+B,format identifier,32,11,0,2,UnsupportedVersionError,False,False
+B,format identifier,32,12,3,3,UnsupportedVersionError,False,False
+B,format identifier,32,13,2,3,UnsupportedVersionError,False,False
+B,format identifier,32,14,0,5,UnsupportedVersionError,False,False
+B,format identifier,32,15,0,4,UnsupportedVersionError,False,False
+B,format identifier,32,16,2,7,UnsupportedVersionError,False,False
+B,format identifier,32,17,3,1,UnsupportedVersionError,False,False
+B,format identifier,32,18,0,7,UnsupportedVersionError,False,False
+B,format identifier,32,19,2,4,UnsupportedVersionError,False,False
+B,version,8,0,4,0,UnsupportedVersionError,False,False
+B,version,8,1,4,1,UnsupportedVersionError,False,False
+B,version,8,2,4,2,UnsupportedVersionError,False,False
+B,version,8,3,4,3,UnsupportedVersionError,False,False
+B,version,8,4,4,4,UnsupportedVersionError,False,False
+B,version,8,5,4,5,UnsupportedVersionError,False,False
+B,version,8,6,4,6,UnsupportedVersionError,False,False
+B,version,8,7,4,7,UnsupportedVersionError,False,False
+B,configuration,8,0,5,0,UnsupportedSuiteError,False,False
+B,configuration,8,1,5,1,UnsupportedSuiteError,False,False
+B,configuration,8,2,5,2,UnsupportedSuiteError,False,False
+B,configuration,8,3,5,3,UnsupportedSuiteError,False,False
+B,configuration,8,4,5,4,UnsupportedSuiteError,False,False
+B,configuration,8,5,5,5,UnsupportedSuiteError,False,False
+B,configuration,8,6,5,6,UnsupportedSuiteError,False,False
+B,configuration,8,7,5,7,UnsupportedSuiteError,False,False
+B,flags and reserved,16,0,6,0,EnvelopeFormatError,False,False
+B,flags and reserved,16,1,6,1,EnvelopeFormatError,False,False
+B,flags and reserved,16,2,6,2,EnvelopeFormatError,False,False
+B,flags and reserved,16,3,6,3,EnvelopeFormatError,False,False
+B,flags and reserved,16,4,6,4,EnvelopeFormatError,False,False
+B,flags and reserved,16,5,6,5,EnvelopeFormatError,False,False
+B,flags and reserved,16,6,6,6,EnvelopeFormatError,False,False
+B,flags and reserved,16,7,6,7,EnvelopeFormatError,False,False
+B,flags and reserved,16,8,7,0,EnvelopeFormatError,False,False
+B,flags and reserved,16,9,7,1,EnvelopeFormatError,False,False
+B,flags and reserved,16,10,7,2,EnvelopeFormatError,False,False
+B,flags and reserved,16,11,7,3,EnvelopeFormatError,False,False
+B,flags and reserved,16,12,7,4,EnvelopeFormatError,False,False
+B,flags and reserved,16,13,7,5,EnvelopeFormatError,False,False
+B,flags and reserved,16,14,7,6,EnvelopeFormatError,False,False
+B,flags and reserved,16,15,7,7,EnvelopeFormatError,False,False
+B,nonce length,8,0,8,0,EnvelopeFormatError,False,False
+B,nonce length,8,1,8,1,EnvelopeFormatError,False,False
+B,nonce length,8,2,8,2,EnvelopeFormatError,False,False
+B,nonce length,8,3,8,3,EnvelopeFormatError,False,False
+B,nonce length,8,4,8,4,EnvelopeFormatError,False,False
+B,nonce length,8,5,8,5,EnvelopeFormatError,False,False
+B,nonce length,8,6,8,6,EnvelopeFormatError,False,False
+B,nonce length,8,7,8,7,EnvelopeFormatError,False,False
+B,nonce,96,0,16,0,DecryptionError,False,False
+B,nonce,96,1,13,7,DecryptionError,False,False
+B,nonce,96,2,19,3,DecryptionError,False,False
+B,nonce,96,3,18,6,DecryptionError,False,False
+B,nonce,96,4,14,2,DecryptionError,False,False
+B,nonce,96,5,12,2,DecryptionError,False,False
+B,nonce,96,6,15,6,DecryptionError,False,False
+B,nonce,96,7,17,7,DecryptionError,False,False
+B,nonce,96,8,9,5,DecryptionError,False,False
+B,nonce,96,9,15,5,DecryptionError,False,False
+B,nonce,96,10,20,5,DecryptionError,False,False
+B,nonce,96,11,11,3,DecryptionError,False,False
+B,nonce,96,12,17,0,DecryptionError,False,False
+B,nonce,96,13,18,4,DecryptionError,False,False
+B,nonce,96,14,9,7,DecryptionError,False,False
+B,nonce,96,15,11,4,DecryptionError,False,False
+B,nonce,96,16,14,0,DecryptionError,False,False
+B,nonce,96,17,13,0,DecryptionError,False,False
+B,nonce,96,18,16,4,DecryptionError,False,False
+B,nonce,96,19,11,6,DecryptionError,False,False
+B,ciphertext length,64,0,28,3,EnvelopeFormatError,False,False
+B,ciphertext length,64,1,21,5,LengthLimitError,False,False
+B,ciphertext length,64,2,22,6,LengthLimitError,False,False
+B,ciphertext length,64,3,23,3,LengthLimitError,False,False
+B,ciphertext length,64,4,25,5,EnvelopeFormatError,False,False
+B,ciphertext length,64,5,24,0,LengthLimitError,False,False
+B,ciphertext length,64,6,28,5,EnvelopeFormatError,False,False
+B,ciphertext length,64,7,28,7,EnvelopeFormatError,False,False
+B,ciphertext length,64,8,24,7,LengthLimitError,False,False
+B,ciphertext length,64,9,25,1,EnvelopeFormatError,False,False
+B,ciphertext length,64,10,27,7,EnvelopeFormatError,False,False
+B,ciphertext length,64,11,21,1,LengthLimitError,False,False
+B,ciphertext length,64,12,23,7,LengthLimitError,False,False
+B,ciphertext length,64,13,25,7,LengthLimitError,False,False
+B,ciphertext length,64,14,24,4,LengthLimitError,False,False
+B,ciphertext length,64,15,27,2,EnvelopeFormatError,False,False
+B,ciphertext length,64,16,23,5,LengthLimitError,False,False
+B,ciphertext length,64,17,27,6,EnvelopeFormatError,False,False
+B,ciphertext length,64,18,22,0,LengthLimitError,False,False
+B,ciphertext length,64,19,25,0,EnvelopeFormatError,False,False
+C,format identifier,32,0,1,0,UnsupportedVersionError,False,False
+C,format identifier,32,1,3,6,UnsupportedVersionError,False,False
+C,format identifier,32,2,0,3,UnsupportedVersionError,False,False
+C,format identifier,32,3,2,6,UnsupportedVersionError,False,False
+C,format identifier,32,4,3,7,UnsupportedVersionError,False,False
+C,format identifier,32,5,2,0,UnsupportedVersionError,False,False
+C,format identifier,32,6,3,3,UnsupportedVersionError,False,False
+C,format identifier,32,7,0,4,UnsupportedVersionError,False,False
+C,format identifier,32,8,0,7,UnsupportedVersionError,False,False
+C,format identifier,32,9,1,1,UnsupportedVersionError,False,False
+C,format identifier,32,10,1,7,UnsupportedVersionError,False,False
+C,format identifier,32,11,2,2,UnsupportedVersionError,False,False
+C,format identifier,32,12,2,4,UnsupportedVersionError,False,False
+C,format identifier,32,13,2,5,UnsupportedVersionError,False,False
+C,format identifier,32,14,3,2,UnsupportedVersionError,False,False
+C,format identifier,32,15,0,6,UnsupportedVersionError,False,False
+C,format identifier,32,16,1,4,UnsupportedVersionError,False,False
+C,format identifier,32,17,3,4,UnsupportedVersionError,False,False
+C,format identifier,32,18,1,6,UnsupportedVersionError,False,False
+C,format identifier,32,19,2,7,UnsupportedVersionError,False,False
+C,version,8,0,4,0,UnsupportedVersionError,False,False
+C,version,8,1,4,1,UnsupportedVersionError,False,False
+C,version,8,2,4,2,UnsupportedVersionError,False,False
+C,version,8,3,4,3,UnsupportedVersionError,False,False
+C,version,8,4,4,4,UnsupportedVersionError,False,False
+C,version,8,5,4,5,UnsupportedVersionError,False,False
+C,version,8,6,4,6,UnsupportedVersionError,False,False
+C,version,8,7,4,7,UnsupportedVersionError,False,False
+C,configuration,8,0,5,0,UnsupportedSuiteError,False,False
+C,configuration,8,1,5,1,UnsupportedSuiteError,False,False
+C,configuration,8,2,5,2,UnsupportedSuiteError,False,False
+C,configuration,8,3,5,3,UnsupportedSuiteError,False,False
+C,configuration,8,4,5,4,UnsupportedSuiteError,False,False
+C,configuration,8,5,5,5,UnsupportedSuiteError,False,False
+C,configuration,8,6,5,6,UnsupportedSuiteError,False,False
+C,configuration,8,7,5,7,UnsupportedSuiteError,False,False
+C,flags and reserved,16,0,6,0,EnvelopeFormatError,False,False
+C,flags and reserved,16,1,6,1,EnvelopeFormatError,False,False
+C,flags and reserved,16,2,6,2,EnvelopeFormatError,False,False
+C,flags and reserved,16,3,6,3,EnvelopeFormatError,False,False
+C,flags and reserved,16,4,6,4,EnvelopeFormatError,False,False
+C,flags and reserved,16,5,6,5,EnvelopeFormatError,False,False
+C,flags and reserved,16,6,6,6,EnvelopeFormatError,False,False
+C,flags and reserved,16,7,6,7,EnvelopeFormatError,False,False
+C,flags and reserved,16,8,7,0,EnvelopeFormatError,False,False
+C,flags and reserved,16,9,7,1,EnvelopeFormatError,False,False
+C,flags and reserved,16,10,7,2,EnvelopeFormatError,False,False
+C,flags and reserved,16,11,7,3,EnvelopeFormatError,False,False
+C,flags and reserved,16,12,7,4,EnvelopeFormatError,False,False
+C,flags and reserved,16,13,7,5,EnvelopeFormatError,False,False
+C,flags and reserved,16,14,7,6,EnvelopeFormatError,False,False
+C,flags and reserved,16,15,7,7,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,0,8,0,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,1,8,1,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,2,8,2,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,3,8,3,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,4,8,4,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,5,8,5,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,6,8,6,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,7,8,7,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,8,9,0,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,9,9,1,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,10,9,2,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,11,9,3,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,12,9,4,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,13,9,5,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,14,9,6,EnvelopeFormatError,False,False
+C,KEM ciphertext length,16,15,9,7,EnvelopeFormatError,False,False
+C,KEM ciphertext,12544,0,1318,0,DecryptionError,False,False
+C,KEM ciphertext,12544,1,939,1,DecryptionError,False,False
+C,KEM ciphertext,12544,2,308,3,DecryptionError,False,False
+C,KEM ciphertext,12544,3,1567,6,DecryptionError,False,False
+C,KEM ciphertext,12544,4,962,1,DecryptionError,False,False
+C,KEM ciphertext,12544,5,899,3,DecryptionError,False,False
+C,KEM ciphertext,12544,6,120,0,DecryptionError,False,False
+C,KEM ciphertext,12544,7,1059,0,DecryptionError,False,False
+C,KEM ciphertext,12544,8,1403,7,DecryptionError,False,False
+C,KEM ciphertext,12544,9,330,6,DecryptionError,False,False
+C,KEM ciphertext,12544,10,1295,2,DecryptionError,False,False
+C,KEM ciphertext,12544,11,1143,7,DecryptionError,False,False
+C,KEM ciphertext,12544,12,896,6,DecryptionError,False,False
+C,KEM ciphertext,12544,13,93,2,DecryptionError,False,False
+C,KEM ciphertext,12544,14,1015,4,DecryptionError,False,False
+C,KEM ciphertext,12544,15,95,4,DecryptionError,False,False
+C,KEM ciphertext,12544,16,971,6,DecryptionError,False,False
+C,KEM ciphertext,12544,17,1120,4,DecryptionError,False,False
+C,KEM ciphertext,12544,18,161,6,DecryptionError,False,False
+C,KEM ciphertext,12544,19,209,1,DecryptionError,False,False
+C,HKDF salt length,8,0,1578,0,EnvelopeFormatError,False,False
+C,HKDF salt length,8,1,1578,1,EnvelopeFormatError,False,False
+C,HKDF salt length,8,2,1578,2,EnvelopeFormatError,False,False
+C,HKDF salt length,8,3,1578,3,EnvelopeFormatError,False,False
+C,HKDF salt length,8,4,1578,4,EnvelopeFormatError,False,False
+C,HKDF salt length,8,5,1578,5,EnvelopeFormatError,False,False
+C,HKDF salt length,8,6,1578,6,EnvelopeFormatError,False,False
+C,HKDF salt length,8,7,1578,7,EnvelopeFormatError,False,False
+C,HKDF salt,256,0,1587,4,DecryptionError,False,False
+C,HKDF salt,256,1,1582,2,DecryptionError,False,False
+C,HKDF salt,256,2,1592,2,DecryptionError,False,False
+C,HKDF salt,256,3,1587,0,DecryptionError,False,False
+C,HKDF salt,256,4,1589,5,DecryptionError,False,False
+C,HKDF salt,256,5,1585,7,DecryptionError,False,False
+C,HKDF salt,256,6,1591,1,DecryptionError,False,False
+C,HKDF salt,256,7,1604,3,DecryptionError,False,False
+C,HKDF salt,256,8,1585,2,DecryptionError,False,False
+C,HKDF salt,256,9,1583,2,DecryptionError,False,False
+C,HKDF salt,256,10,1610,0,DecryptionError,False,False
+C,HKDF salt,256,11,1602,7,DecryptionError,False,False
+C,HKDF salt,256,12,1599,5,DecryptionError,False,False
+C,HKDF salt,256,13,1609,4,DecryptionError,False,False
+C,HKDF salt,256,14,1601,1,DecryptionError,False,False
+C,HKDF salt,256,15,1600,6,DecryptionError,False,False
+C,HKDF salt,256,16,1597,0,DecryptionError,False,False
+C,HKDF salt,256,17,1579,7,DecryptionError,False,False
+C,HKDF salt,256,18,1584,6,DecryptionError,False,False
+C,HKDF salt,256,19,1601,4,DecryptionError,False,False
+C,commitment length,8,0,1611,0,EnvelopeFormatError,False,False
+C,commitment length,8,1,1611,1,EnvelopeFormatError,False,False
+C,commitment length,8,2,1611,2,EnvelopeFormatError,False,False
+C,commitment length,8,3,1611,3,EnvelopeFormatError,False,False
+C,commitment length,8,4,1611,4,EnvelopeFormatError,False,False
+C,commitment length,8,5,1611,5,EnvelopeFormatError,False,False
+C,commitment length,8,6,1611,6,EnvelopeFormatError,False,False
+C,commitment length,8,7,1611,7,EnvelopeFormatError,False,False
+C,key commitment,256,0,1632,5,DecryptionError,False,False
+C,key commitment,256,1,1640,2,DecryptionError,False,False
+C,key commitment,256,2,1629,6,DecryptionError,False,False
+C,key commitment,256,3,1630,5,DecryptionError,False,False
+C,key commitment,256,4,1641,2,DecryptionError,False,False
+C,key commitment,256,5,1622,5,DecryptionError,False,False
+C,key commitment,256,6,1640,7,DecryptionError,False,False
+C,key commitment,256,7,1619,5,DecryptionError,False,False
+C,key commitment,256,8,1619,6,DecryptionError,False,False
+C,key commitment,256,9,1635,4,DecryptionError,False,False
+C,key commitment,256,10,1635,1,DecryptionError,False,False
+C,key commitment,256,11,1642,6,DecryptionError,False,False
+C,key commitment,256,12,1624,4,DecryptionError,False,False
+C,key commitment,256,13,1640,0,DecryptionError,False,False
+C,key commitment,256,14,1630,0,DecryptionError,False,False
+C,key commitment,256,15,1624,5,DecryptionError,False,False
+C,key commitment,256,16,1628,3,DecryptionError,False,False
+C,key commitment,256,17,1633,5,DecryptionError,False,False
+C,key commitment,256,18,1627,0,DecryptionError,False,False
+C,key commitment,256,19,1638,7,DecryptionError,False,False
+C,nonce length,8,0,1644,0,EnvelopeFormatError,False,False
+C,nonce length,8,1,1644,1,EnvelopeFormatError,False,False
+C,nonce length,8,2,1644,2,EnvelopeFormatError,False,False
+C,nonce length,8,3,1644,3,EnvelopeFormatError,False,False
+C,nonce length,8,4,1644,4,EnvelopeFormatError,False,False
+C,nonce length,8,5,1644,5,EnvelopeFormatError,False,False
+C,nonce length,8,6,1644,6,EnvelopeFormatError,False,False
+C,nonce length,8,7,1644,7,EnvelopeFormatError,False,False
+C,nonce,96,0,1653,5,DecryptionError,False,False
+C,nonce,96,1,1655,6,DecryptionError,False,False
+C,nonce,96,2,1645,3,DecryptionError,False,False
+C,nonce,96,3,1652,5,DecryptionError,False,False
+C,nonce,96,4,1655,1,DecryptionError,False,False
+C,nonce,96,5,1654,4,DecryptionError,False,False
+C,nonce,96,6,1647,7,DecryptionError,False,False
+C,nonce,96,7,1656,1,DecryptionError,False,False
+C,nonce,96,8,1645,6,DecryptionError,False,False
+C,nonce,96,9,1646,3,DecryptionError,False,False
+C,nonce,96,10,1653,7,DecryptionError,False,False
+C,nonce,96,11,1652,2,DecryptionError,False,False
+C,nonce,96,12,1648,0,DecryptionError,False,False
+C,nonce,96,13,1646,7,DecryptionError,False,False
+C,nonce,96,14,1646,0,DecryptionError,False,False
+C,nonce,96,15,1650,3,DecryptionError,False,False
+C,nonce,96,16,1651,0,DecryptionError,False,False
+C,nonce,96,17,1652,0,DecryptionError,False,False
+C,nonce,96,18,1645,7,DecryptionError,False,False
+C,nonce,96,19,1648,5,DecryptionError,False,False
+C,ciphertext length,64,0,1658,0,LengthLimitError,False,False
+C,ciphertext length,64,1,1659,4,LengthLimitError,False,False
+C,ciphertext length,64,2,1664,1,EnvelopeFormatError,False,False
+C,ciphertext length,64,3,1657,0,LengthLimitError,False,False
+C,ciphertext length,64,4,1660,0,LengthLimitError,False,False
+C,ciphertext length,64,5,1664,7,EnvelopeFormatError,False,False
+C,ciphertext length,64,6,1658,1,LengthLimitError,False,False
+C,ciphertext length,64,7,1660,7,LengthLimitError,False,False
+C,ciphertext length,64,8,1662,3,EnvelopeFormatError,False,False
+C,ciphertext length,64,9,1663,0,EnvelopeFormatError,False,False
+C,ciphertext length,64,10,1659,5,LengthLimitError,False,False
+C,ciphertext length,64,11,1664,4,EnvelopeFormatError,False,False
+C,ciphertext length,64,12,1664,0,EnvelopeFormatError,False,False
+C,ciphertext length,64,13,1662,6,EnvelopeFormatError,False,False
+C,ciphertext length,64,14,1662,5,EnvelopeFormatError,False,False
+C,ciphertext length,64,15,1657,1,LengthLimitError,False,False
+C,ciphertext length,64,16,1660,3,LengthLimitError,False,False
+C,ciphertext length,64,17,1663,3,EnvelopeFormatError,False,False
+C,ciphertext length,64,18,1658,2,LengthLimitError,False,False
+C,ciphertext length,64,19,1657,2,LengthLimitError,False,False
+D,format identifier,32,0,3,4,UnsupportedVersionError,False,False
+D,format identifier,32,1,0,3,UnsupportedVersionError,False,False
+D,format identifier,32,2,1,4,UnsupportedVersionError,False,False
+D,format identifier,32,3,2,1,UnsupportedVersionError,False,False
+D,format identifier,32,4,3,3,UnsupportedVersionError,False,False
+D,format identifier,32,5,3,0,UnsupportedVersionError,False,False
+D,format identifier,32,6,2,4,UnsupportedVersionError,False,False
+D,format identifier,32,7,1,7,UnsupportedVersionError,False,False
+D,format identifier,32,8,2,3,UnsupportedVersionError,False,False
+D,format identifier,32,9,0,2,UnsupportedVersionError,False,False
+D,format identifier,32,10,1,5,UnsupportedVersionError,False,False
+D,format identifier,32,11,2,6,UnsupportedVersionError,False,False
+D,format identifier,32,12,0,5,UnsupportedVersionError,False,False
+D,format identifier,32,13,1,3,UnsupportedVersionError,False,False
+D,format identifier,32,14,2,2,UnsupportedVersionError,False,False
+D,format identifier,32,15,0,1,UnsupportedVersionError,False,False
+D,format identifier,32,16,0,4,UnsupportedVersionError,False,False
+D,format identifier,32,17,2,5,UnsupportedVersionError,False,False
+D,format identifier,32,18,1,0,UnsupportedVersionError,False,False
+D,format identifier,32,19,2,0,UnsupportedVersionError,False,False
+D,version,8,0,4,0,UnsupportedVersionError,False,False
+D,version,8,1,4,1,UnsupportedVersionError,False,False
+D,version,8,2,4,2,UnsupportedVersionError,False,False
+D,version,8,3,4,3,UnsupportedVersionError,False,False
+D,version,8,4,4,4,UnsupportedVersionError,False,False
+D,version,8,5,4,5,UnsupportedVersionError,False,False
+D,version,8,6,4,6,UnsupportedVersionError,False,False
+D,version,8,7,4,7,UnsupportedVersionError,False,False
+D,configuration,8,0,5,0,UnsupportedSuiteError,False,False
+D,configuration,8,1,5,1,UnsupportedSuiteError,False,False
+D,configuration,8,2,5,2,UnsupportedSuiteError,False,False
+D,configuration,8,3,5,3,UnsupportedSuiteError,False,False
+D,configuration,8,4,5,4,UnsupportedSuiteError,False,False
+D,configuration,8,5,5,5,UnsupportedSuiteError,False,False
+D,configuration,8,6,5,6,UnsupportedSuiteError,False,False
+D,configuration,8,7,5,7,UnsupportedSuiteError,False,False
+D,flags and reserved,16,0,6,0,EnvelopeFormatError,False,False
+D,flags and reserved,16,1,6,1,EnvelopeFormatError,False,False
+D,flags and reserved,16,2,6,2,EnvelopeFormatError,False,False
+D,flags and reserved,16,3,6,3,EnvelopeFormatError,False,False
+D,flags and reserved,16,4,6,4,EnvelopeFormatError,False,False
+D,flags and reserved,16,5,6,5,EnvelopeFormatError,False,False
+D,flags and reserved,16,6,6,6,EnvelopeFormatError,False,False
+D,flags and reserved,16,7,6,7,EnvelopeFormatError,False,False
+D,flags and reserved,16,8,7,0,EnvelopeFormatError,False,False
+D,flags and reserved,16,9,7,1,EnvelopeFormatError,False,False
+D,flags and reserved,16,10,7,2,EnvelopeFormatError,False,False
+D,flags and reserved,16,11,7,3,EnvelopeFormatError,False,False
+D,flags and reserved,16,12,7,4,EnvelopeFormatError,False,False
+D,flags and reserved,16,13,7,5,EnvelopeFormatError,False,False
+D,flags and reserved,16,14,7,6,EnvelopeFormatError,False,False
+D,flags and reserved,16,15,7,7,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,0,8,0,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,1,8,1,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,2,8,2,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,3,8,3,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,4,8,4,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,5,8,5,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,6,8,6,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,7,8,7,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,8,9,0,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,9,9,1,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,10,9,2,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,11,9,3,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,12,9,4,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,13,9,5,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,14,9,6,EnvelopeFormatError,False,False
+D,KEM ciphertext length,16,15,9,7,EnvelopeFormatError,False,False
+D,KEM ciphertext,12544,0,1497,4,DecryptionError,False,False
+D,KEM ciphertext,12544,1,258,5,DecryptionError,False,False
+D,KEM ciphertext,12544,2,1558,0,DecryptionError,False,False
+D,KEM ciphertext,12544,3,230,3,DecryptionError,False,False
+D,KEM ciphertext,12544,4,660,2,DecryptionError,False,False
+D,KEM ciphertext,12544,5,822,7,DecryptionError,False,False
+D,KEM ciphertext,12544,6,64,1,DecryptionError,False,False
+D,KEM ciphertext,12544,7,569,3,DecryptionError,False,False
+D,KEM ciphertext,12544,8,800,6,DecryptionError,False,False
+D,KEM ciphertext,12544,9,1547,5,DecryptionError,False,False
+D,KEM ciphertext,12544,10,1127,3,DecryptionError,False,False
+D,KEM ciphertext,12544,11,334,6,DecryptionError,False,False
+D,KEM ciphertext,12544,12,711,3,DecryptionError,False,False
+D,KEM ciphertext,12544,13,175,0,DecryptionError,False,False
+D,KEM ciphertext,12544,14,1009,4,DecryptionError,False,False
+D,KEM ciphertext,12544,15,414,0,DecryptionError,False,False
+D,KEM ciphertext,12544,16,491,6,DecryptionError,False,False
+D,KEM ciphertext,12544,17,891,5,DecryptionError,False,False
+D,KEM ciphertext,12544,18,180,3,DecryptionError,False,False
+D,KEM ciphertext,12544,19,1262,0,DecryptionError,False,False
+D,HKDF salt length,8,0,1578,0,EnvelopeFormatError,False,False
+D,HKDF salt length,8,1,1578,1,EnvelopeFormatError,False,False
+D,HKDF salt length,8,2,1578,2,EnvelopeFormatError,False,False
+D,HKDF salt length,8,3,1578,3,EnvelopeFormatError,False,False
+D,HKDF salt length,8,4,1578,4,EnvelopeFormatError,False,False
+D,HKDF salt length,8,5,1578,5,EnvelopeFormatError,False,False
+D,HKDF salt length,8,6,1578,6,EnvelopeFormatError,False,False
+D,HKDF salt length,8,7,1578,7,EnvelopeFormatError,False,False
+D,HKDF salt,256,0,1606,4,DecryptionError,False,False
+D,HKDF salt,256,1,1603,5,DecryptionError,False,False
+D,HKDF salt,256,2,1609,6,DecryptionError,False,False
+D,HKDF salt,256,3,1601,6,DecryptionError,False,False
+D,HKDF salt,256,4,1599,4,DecryptionError,False,False
+D,HKDF salt,256,5,1606,6,DecryptionError,False,False
+D,HKDF salt,256,6,1606,1,DecryptionError,False,False
+D,HKDF salt,256,7,1581,0,DecryptionError,False,False
+D,HKDF salt,256,8,1582,0,DecryptionError,False,False
+D,HKDF salt,256,9,1580,7,DecryptionError,False,False
+D,HKDF salt,256,10,1596,5,DecryptionError,False,False
+D,HKDF salt,256,11,1601,4,DecryptionError,False,False
+D,HKDF salt,256,12,1588,7,DecryptionError,False,False
+D,HKDF salt,256,13,1582,3,DecryptionError,False,False
+D,HKDF salt,256,14,1610,1,DecryptionError,False,False
+D,HKDF salt,256,15,1582,1,DecryptionError,False,False
+D,HKDF salt,256,16,1598,2,DecryptionError,False,False
+D,HKDF salt,256,17,1594,7,DecryptionError,False,False
+D,HKDF salt,256,18,1585,3,DecryptionError,False,False
+D,HKDF salt,256,19,1610,0,DecryptionError,False,False
+D,commitment length,8,0,1611,0,EnvelopeFormatError,False,False
+D,commitment length,8,1,1611,1,EnvelopeFormatError,False,False
+D,commitment length,8,2,1611,2,EnvelopeFormatError,False,False
+D,commitment length,8,3,1611,3,EnvelopeFormatError,False,False
+D,commitment length,8,4,1611,4,EnvelopeFormatError,False,False
+D,commitment length,8,5,1611,5,EnvelopeFormatError,False,False
+D,commitment length,8,6,1611,6,EnvelopeFormatError,False,False
+D,commitment length,8,7,1611,7,EnvelopeFormatError,False,False
+D,key commitment,256,0,1620,0,DecryptionError,False,False
+D,key commitment,256,1,1631,5,DecryptionError,False,False
+D,key commitment,256,2,1625,7,DecryptionError,False,False
+D,key commitment,256,3,1633,2,DecryptionError,False,False
+D,key commitment,256,4,1616,5,DecryptionError,False,False
+D,key commitment,256,5,1635,6,DecryptionError,False,False
+D,key commitment,256,6,1619,0,DecryptionError,False,False
+D,key commitment,256,7,1625,0,DecryptionError,False,False
+D,key commitment,256,8,1617,7,DecryptionError,False,False
+D,key commitment,256,9,1621,3,DecryptionError,False,False
+D,key commitment,256,10,1615,7,DecryptionError,False,False
+D,key commitment,256,11,1618,1,DecryptionError,False,False
+D,key commitment,256,12,1635,0,DecryptionError,False,False
+D,key commitment,256,13,1612,0,DecryptionError,False,False
+D,key commitment,256,14,1612,5,DecryptionError,False,False
+D,key commitment,256,15,1634,5,DecryptionError,False,False
+D,key commitment,256,16,1615,6,DecryptionError,False,False
+D,key commitment,256,17,1635,4,DecryptionError,False,False
+D,key commitment,256,18,1626,0,DecryptionError,False,False
+D,key commitment,256,19,1626,5,DecryptionError,False,False
+D,nonce length,8,0,1644,0,EnvelopeFormatError,False,False
+D,nonce length,8,1,1644,1,EnvelopeFormatError,False,False
+D,nonce length,8,2,1644,2,EnvelopeFormatError,False,False
+D,nonce length,8,3,1644,3,EnvelopeFormatError,False,False
+D,nonce length,8,4,1644,4,EnvelopeFormatError,False,False
+D,nonce length,8,5,1644,5,EnvelopeFormatError,False,False
+D,nonce length,8,6,1644,6,EnvelopeFormatError,False,False
+D,nonce length,8,7,1644,7,EnvelopeFormatError,False,False
+D,nonce,96,0,1645,1,DecryptionError,False,False
+D,nonce,96,1,1652,7,DecryptionError,False,False
+D,nonce,96,2,1653,3,DecryptionError,False,False
+D,nonce,96,3,1645,5,DecryptionError,False,False
+D,nonce,96,4,1649,3,DecryptionError,False,False
+D,nonce,96,5,1654,3,DecryptionError,False,False
+D,nonce,96,6,1653,2,DecryptionError,False,False
+D,nonce,96,7,1649,6,DecryptionError,False,False
+D,nonce,96,8,1656,0,DecryptionError,False,False
+D,nonce,96,9,1653,5,DecryptionError,False,False
+D,nonce,96,10,1650,4,DecryptionError,False,False
+D,nonce,96,11,1654,2,DecryptionError,False,False
+D,nonce,96,12,1652,4,DecryptionError,False,False
+D,nonce,96,13,1647,1,DecryptionError,False,False
+D,nonce,96,14,1649,7,DecryptionError,False,False
+D,nonce,96,15,1648,1,DecryptionError,False,False
+D,nonce,96,16,1645,2,DecryptionError,False,False
+D,nonce,96,17,1652,3,DecryptionError,False,False
+D,nonce,96,18,1654,1,DecryptionError,False,False
+D,nonce,96,19,1645,6,DecryptionError,False,False
+D,ciphertext length,64,0,1658,7,LengthLimitError,False,False
+D,ciphertext length,64,1,1663,6,EnvelopeFormatError,False,False
+D,ciphertext length,64,2,1658,3,LengthLimitError,False,False
+D,ciphertext length,64,3,1657,5,LengthLimitError,False,False
+D,ciphertext length,64,4,1659,3,LengthLimitError,False,False
+D,ciphertext length,64,5,1664,3,EnvelopeFormatError,False,False
+D,ciphertext length,64,6,1664,7,EnvelopeFormatError,False,False
+D,ciphertext length,64,7,1663,7,EnvelopeFormatError,False,False
+D,ciphertext length,64,8,1661,1,EnvelopeFormatError,False,False
+D,ciphertext length,64,9,1661,6,LengthLimitError,False,False
+D,ciphertext length,64,10,1658,4,LengthLimitError,False,False
+D,ciphertext length,64,11,1661,2,EnvelopeFormatError,False,False
+D,ciphertext length,64,12,1660,7,LengthLimitError,False,False
+D,ciphertext length,64,13,1659,4,LengthLimitError,False,False
+D,ciphertext length,64,14,1660,3,LengthLimitError,False,False
+D,ciphertext length,64,15,1657,1,LengthLimitError,False,False
+D,ciphertext length,64,16,1657,7,LengthLimitError,False,False
+D,ciphertext length,64,17,1657,4,LengthLimitError,False,False
+D,ciphertext length,64,18,1660,2,LengthLimitError,False,False
+D,ciphertext length,64,19,1662,3,EnvelopeFormatError,False,False
+E,format identifier,32,0,1,6,UnsupportedVersionError,False,False
+E,format identifier,32,1,1,5,UnsupportedVersionError,False,False
+E,format identifier,32,2,2,0,UnsupportedVersionError,False,False
+E,format identifier,32,3,0,5,UnsupportedVersionError,False,False
+E,format identifier,32,4,3,4,UnsupportedVersionError,False,False
+E,format identifier,32,5,0,4,UnsupportedVersionError,False,False
+E,format identifier,32,6,0,2,UnsupportedVersionError,False,False
+E,format identifier,32,7,0,3,UnsupportedVersionError,False,False
+E,format identifier,32,8,1,1,UnsupportedVersionError,False,False
+E,format identifier,32,9,2,6,UnsupportedVersionError,False,False
+E,format identifier,32,10,3,7,UnsupportedVersionError,False,False
+E,format identifier,32,11,0,0,UnsupportedVersionError,False,False
+E,format identifier,32,12,0,1,UnsupportedVersionError,False,False
+E,format identifier,32,13,2,1,UnsupportedVersionError,False,False
+E,format identifier,32,14,3,0,UnsupportedVersionError,False,False
+E,format identifier,32,15,2,5,UnsupportedVersionError,False,False
+E,format identifier,32,16,3,2,UnsupportedVersionError,False,False
+E,format identifier,32,17,3,1,UnsupportedVersionError,False,False
+E,format identifier,32,18,2,7,UnsupportedVersionError,False,False
+E,format identifier,32,19,1,3,UnsupportedVersionError,False,False
+E,version,8,0,4,0,UnsupportedVersionError,False,False
+E,version,8,1,4,1,UnsupportedVersionError,False,False
+E,version,8,2,4,2,UnsupportedVersionError,False,False
+E,version,8,3,4,3,UnsupportedVersionError,False,False
+E,version,8,4,4,4,UnsupportedVersionError,False,False
+E,version,8,5,4,5,UnsupportedVersionError,False,False
+E,version,8,6,4,6,UnsupportedVersionError,False,False
+E,version,8,7,4,7,UnsupportedVersionError,False,False
+E,configuration,8,0,5,0,UnsupportedSuiteError,False,False
+E,configuration,8,1,5,1,UnsupportedSuiteError,False,False
+E,configuration,8,2,5,2,UnsupportedSuiteError,False,False
+E,configuration,8,3,5,3,UnsupportedSuiteError,False,False
+E,configuration,8,4,5,4,UnsupportedSuiteError,False,False
+E,configuration,8,5,5,5,UnsupportedSuiteError,False,False
+E,configuration,8,6,5,6,UnsupportedSuiteError,False,False
+E,configuration,8,7,5,7,UnsupportedSuiteError,False,False
+E,flags and reserved,16,0,6,0,EnvelopeFormatError,False,False
+E,flags and reserved,16,1,6,1,EnvelopeFormatError,False,False
+E,flags and reserved,16,2,6,2,EnvelopeFormatError,False,False
+E,flags and reserved,16,3,6,3,EnvelopeFormatError,False,False
+E,flags and reserved,16,4,6,4,EnvelopeFormatError,False,False
+E,flags and reserved,16,5,6,5,EnvelopeFormatError,False,False
+E,flags and reserved,16,6,6,6,EnvelopeFormatError,False,False
+E,flags and reserved,16,7,6,7,EnvelopeFormatError,False,False
+E,flags and reserved,16,8,7,0,EnvelopeFormatError,False,False
+E,flags and reserved,16,9,7,1,EnvelopeFormatError,False,False
+E,flags and reserved,16,10,7,2,EnvelopeFormatError,False,False
+E,flags and reserved,16,11,7,3,EnvelopeFormatError,False,False
+E,flags and reserved,16,12,7,4,EnvelopeFormatError,False,False
+E,flags and reserved,16,13,7,5,EnvelopeFormatError,False,False
+E,flags and reserved,16,14,7,6,EnvelopeFormatError,False,False
+E,flags and reserved,16,15,7,7,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,0,8,0,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,1,8,1,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,2,8,2,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,3,8,3,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,4,8,4,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,5,8,5,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,6,8,6,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,7,8,7,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,8,9,0,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,9,9,1,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,10,9,2,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,11,9,3,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,12,9,4,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,13,9,5,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,14,9,6,EnvelopeFormatError,False,False
+E,KEM ciphertext length,16,15,9,7,EnvelopeFormatError,False,False
+E,KEM ciphertext,12544,0,1376,3,DecryptionError,False,False
+E,KEM ciphertext,12544,1,91,5,DecryptionError,False,False
+E,KEM ciphertext,12544,2,539,5,DecryptionError,False,False
+E,KEM ciphertext,12544,3,1455,5,DecryptionError,False,False
+E,KEM ciphertext,12544,4,234,2,DecryptionError,False,False
+E,KEM ciphertext,12544,5,880,2,DecryptionError,False,False
+E,KEM ciphertext,12544,6,1381,1,DecryptionError,False,False
+E,KEM ciphertext,12544,7,657,2,DecryptionError,False,False
+E,KEM ciphertext,12544,8,301,1,DecryptionError,False,False
+E,KEM ciphertext,12544,9,1023,7,DecryptionError,False,False
+E,KEM ciphertext,12544,10,787,0,DecryptionError,False,False
+E,KEM ciphertext,12544,11,179,3,DecryptionError,False,False
+E,KEM ciphertext,12544,12,1423,5,DecryptionError,False,False
+E,KEM ciphertext,12544,13,360,4,DecryptionError,False,False
+E,KEM ciphertext,12544,14,1512,2,DecryptionError,False,False
+E,KEM ciphertext,12544,15,1015,2,DecryptionError,False,False
+E,KEM ciphertext,12544,16,897,6,DecryptionError,False,False
+E,KEM ciphertext,12544,17,324,7,DecryptionError,False,False
+E,KEM ciphertext,12544,18,1422,0,DecryptionError,False,False
+E,KEM ciphertext,12544,19,737,1,DecryptionError,False,False
+E,HKDF salt length,8,0,1578,0,EnvelopeFormatError,False,False
+E,HKDF salt length,8,1,1578,1,EnvelopeFormatError,False,False
+E,HKDF salt length,8,2,1578,2,EnvelopeFormatError,False,False
+E,HKDF salt length,8,3,1578,3,EnvelopeFormatError,False,False
+E,HKDF salt length,8,4,1578,4,EnvelopeFormatError,False,False
+E,HKDF salt length,8,5,1578,5,EnvelopeFormatError,False,False
+E,HKDF salt length,8,6,1578,6,EnvelopeFormatError,False,False
+E,HKDF salt length,8,7,1578,7,EnvelopeFormatError,False,False
+E,HKDF salt,256,0,1591,7,DecryptionError,False,False
+E,HKDF salt,256,1,1593,5,DecryptionError,False,False
+E,HKDF salt,256,2,1579,4,DecryptionError,False,False
+E,HKDF salt,256,3,1592,7,DecryptionError,False,False
+E,HKDF salt,256,4,1604,6,DecryptionError,False,False
+E,HKDF salt,256,5,1595,3,DecryptionError,False,False
+E,HKDF salt,256,6,1607,5,DecryptionError,False,False
+E,HKDF salt,256,7,1590,2,DecryptionError,False,False
+E,HKDF salt,256,8,1579,0,DecryptionError,False,False
+E,HKDF salt,256,9,1607,4,DecryptionError,False,False
+E,HKDF salt,256,10,1606,0,DecryptionError,False,False
+E,HKDF salt,256,11,1595,2,DecryptionError,False,False
+E,HKDF salt,256,12,1582,6,DecryptionError,False,False
+E,HKDF salt,256,13,1597,1,DecryptionError,False,False
+E,HKDF salt,256,14,1595,1,DecryptionError,False,False
+E,HKDF salt,256,15,1595,6,DecryptionError,False,False
+E,HKDF salt,256,16,1607,2,DecryptionError,False,False
+E,HKDF salt,256,17,1599,2,DecryptionError,False,False
+E,HKDF salt,256,18,1601,4,DecryptionError,False,False
+E,HKDF salt,256,19,1590,5,DecryptionError,False,False
+E,commitment length,8,0,1611,0,EnvelopeFormatError,False,False
+E,commitment length,8,1,1611,1,EnvelopeFormatError,False,False
+E,commitment length,8,2,1611,2,EnvelopeFormatError,False,False
+E,commitment length,8,3,1611,3,EnvelopeFormatError,False,False
+E,commitment length,8,4,1611,4,EnvelopeFormatError,False,False
+E,commitment length,8,5,1611,5,EnvelopeFormatError,False,False
+E,commitment length,8,6,1611,6,EnvelopeFormatError,False,False
+E,commitment length,8,7,1611,7,EnvelopeFormatError,False,False
+E,key commitment,256,0,1636,6,DecryptionError,False,False
+E,key commitment,256,1,1616,2,DecryptionError,False,False
+E,key commitment,256,2,1635,0,DecryptionError,False,False
+E,key commitment,256,3,1630,2,DecryptionError,False,False
+E,key commitment,256,4,1631,5,DecryptionError,False,False
+E,key commitment,256,5,1626,3,DecryptionError,False,False
+E,key commitment,256,6,1623,0,DecryptionError,False,False
+E,key commitment,256,7,1633,4,DecryptionError,False,False
+E,key commitment,256,8,1622,5,DecryptionError,False,False
+E,key commitment,256,9,1634,3,DecryptionError,False,False
+E,key commitment,256,10,1630,0,DecryptionError,False,False
+E,key commitment,256,11,1630,4,DecryptionError,False,False
+E,key commitment,256,12,1634,6,DecryptionError,False,False
+E,key commitment,256,13,1636,7,DecryptionError,False,False
+E,key commitment,256,14,1619,5,DecryptionError,False,False
+E,key commitment,256,15,1623,6,DecryptionError,False,False
+E,key commitment,256,16,1638,4,DecryptionError,False,False
+E,key commitment,256,17,1638,1,DecryptionError,False,False
+E,key commitment,256,18,1625,7,DecryptionError,False,False
+E,key commitment,256,19,1618,2,DecryptionError,False,False
+E,scrypt identifier and parameters,32,0,1646,1,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,1,1647,1,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,2,1644,0,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,3,1647,0,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,4,1647,6,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,5,1647,7,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,6,1645,6,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,7,1646,4,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,8,1647,5,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,9,1645,3,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,10,1645,0,DecryptionError,False,False
+E,scrypt identifier and parameters,32,11,1644,7,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,12,1646,6,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,13,1646,2,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,14,1645,5,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,15,1644,6,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,16,1644,4,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,17,1647,3,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,18,1644,5,UnsupportedParameterError,False,False
+E,scrypt identifier and parameters,32,19,1646,7,UnsupportedParameterError,False,False
+E,password salt length,8,0,1648,0,EnvelopeFormatError,False,False
+E,password salt length,8,1,1648,1,EnvelopeFormatError,False,False
+E,password salt length,8,2,1648,2,EnvelopeFormatError,False,False
+E,password salt length,8,3,1648,3,EnvelopeFormatError,False,False
+E,password salt length,8,4,1648,4,EnvelopeFormatError,False,False
+E,password salt length,8,5,1648,5,EnvelopeFormatError,False,False
+E,password salt length,8,6,1648,6,EnvelopeFormatError,False,False
+E,password salt length,8,7,1648,7,EnvelopeFormatError,False,False
+E,password salt,128,0,1659,2,DecryptionError,False,False
+E,password salt,128,1,1655,5,DecryptionError,False,False
+E,password salt,128,2,1649,3,DecryptionError,False,False
+E,password salt,128,3,1661,7,DecryptionError,False,False
+E,password salt,128,4,1658,2,DecryptionError,False,False
+E,password salt,128,5,1655,6,DecryptionError,False,False
+E,password salt,128,6,1655,3,DecryptionError,False,False
+E,password salt,128,7,1652,6,DecryptionError,False,False
+E,password salt,128,8,1662,3,DecryptionError,False,False
+E,password salt,128,9,1662,1,DecryptionError,False,False
+E,password salt,128,10,1649,6,DecryptionError,False,False
+E,password salt,128,11,1654,2,DecryptionError,False,False
+E,password salt,128,12,1660,4,DecryptionError,False,False
+E,password salt,128,13,1652,0,DecryptionError,False,False
+E,password salt,128,14,1652,2,DecryptionError,False,False
+E,password salt,128,15,1654,1,DecryptionError,False,False
+E,password salt,128,16,1664,5,DecryptionError,False,False
+E,password salt,128,17,1652,5,DecryptionError,False,False
+E,password salt,128,18,1658,7,DecryptionError,False,False
+E,password salt,128,19,1657,7,DecryptionError,False,False
+E,nonce length,8,0,1665,0,EnvelopeFormatError,False,False
+E,nonce length,8,1,1665,1,EnvelopeFormatError,False,False
+E,nonce length,8,2,1665,2,EnvelopeFormatError,False,False
+E,nonce length,8,3,1665,3,EnvelopeFormatError,False,False
+E,nonce length,8,4,1665,4,EnvelopeFormatError,False,False
+E,nonce length,8,5,1665,5,EnvelopeFormatError,False,False
+E,nonce length,8,6,1665,6,EnvelopeFormatError,False,False
+E,nonce length,8,7,1665,7,EnvelopeFormatError,False,False
+E,nonce,96,0,1669,1,DecryptionError,False,False
+E,nonce,96,1,1672,0,DecryptionError,False,False
+E,nonce,96,2,1672,5,DecryptionError,False,False
+E,nonce,96,3,1670,3,DecryptionError,False,False
+E,nonce,96,4,1666,0,DecryptionError,False,False
+E,nonce,96,5,1677,2,DecryptionError,False,False
+E,nonce,96,6,1677,6,DecryptionError,False,False
+E,nonce,96,7,1668,7,DecryptionError,False,False
+E,nonce,96,8,1672,1,DecryptionError,False,False
+E,nonce,96,9,1669,3,DecryptionError,False,False
+E,nonce,96,10,1674,0,DecryptionError,False,False
+E,nonce,96,11,1674,5,DecryptionError,False,False
+E,nonce,96,12,1673,0,DecryptionError,False,False
+E,nonce,96,13,1671,2,DecryptionError,False,False
+E,nonce,96,14,1675,2,DecryptionError,False,False
+E,nonce,96,15,1671,3,DecryptionError,False,False
+E,nonce,96,16,1676,7,DecryptionError,False,False
+E,nonce,96,17,1672,7,DecryptionError,False,False
+E,nonce,96,18,1668,4,DecryptionError,False,False
+E,nonce,96,19,1671,6,DecryptionError,False,False
+E,ciphertext length,64,0,1678,7,LengthLimitError,False,False
+E,ciphertext length,64,1,1680,4,LengthLimitError,False,False
+E,ciphertext length,64,2,1683,3,EnvelopeFormatError,False,False
+E,ciphertext length,64,3,1679,5,LengthLimitError,False,False
+E,ciphertext length,64,4,1680,7,LengthLimitError,False,False
+E,ciphertext length,64,5,1683,6,EnvelopeFormatError,False,False
+E,ciphertext length,64,6,1679,2,LengthLimitError,False,False
+E,ciphertext length,64,7,1682,4,EnvelopeFormatError,False,False
+E,ciphertext length,64,8,1679,3,LengthLimitError,False,False
+E,ciphertext length,64,9,1682,0,EnvelopeFormatError,False,False
+E,ciphertext length,64,10,1684,4,EnvelopeFormatError,False,False
+E,ciphertext length,64,11,1678,5,LengthLimitError,False,False
+E,ciphertext length,64,12,1681,7,LengthLimitError,False,False
+E,ciphertext length,64,13,1682,6,LengthLimitError,False,False
+E,ciphertext length,64,14,1684,7,EnvelopeFormatError,False,False
+E,ciphertext length,64,15,1683,1,EnvelopeFormatError,False,False
+E,ciphertext length,64,16,1680,1,LengthLimitError,False,False
+E,ciphertext length,64,17,1681,5,LengthLimitError,False,False
+E,ciphertext length,64,18,1681,6,LengthLimitError,False,False
+E,ciphertext length,64,19,1681,4,LengthLimitError,False,False
+F,format identifier,32,0,3,6,UnsupportedVersionError,False,False
+F,format identifier,32,1,3,5,UnsupportedVersionError,False,False
+F,format identifier,32,2,1,2,UnsupportedVersionError,False,False
+F,format identifier,32,3,0,7,UnsupportedVersionError,False,False
+F,format identifier,32,4,1,0,UnsupportedVersionError,False,False
+F,format identifier,32,5,1,7,UnsupportedVersionError,False,False
+F,format identifier,32,6,3,3,UnsupportedVersionError,False,False
+F,format identifier,32,7,1,6,UnsupportedVersionError,False,False
+F,format identifier,32,8,0,2,UnsupportedVersionError,False,False
+F,format identifier,32,9,1,5,UnsupportedVersionError,False,False
+F,format identifier,32,10,0,4,UnsupportedVersionError,False,False
+F,format identifier,32,11,2,4,UnsupportedVersionError,False,False
+F,format identifier,32,12,1,3,UnsupportedVersionError,False,False
+F,format identifier,32,13,3,4,UnsupportedVersionError,False,False
+F,format identifier,32,14,0,5,UnsupportedVersionError,False,False
+F,format identifier,32,15,2,1,UnsupportedVersionError,False,False
+F,format identifier,32,16,2,0,UnsupportedVersionError,False,False
+F,format identifier,32,17,3,0,UnsupportedVersionError,False,False
+F,format identifier,32,18,1,4,UnsupportedVersionError,False,False
+F,format identifier,32,19,2,5,UnsupportedVersionError,False,False
+F,version,8,0,4,0,UnsupportedVersionError,False,False
+F,version,8,1,4,1,UnsupportedVersionError,False,False
+F,version,8,2,4,2,UnsupportedVersionError,False,False
+F,version,8,3,4,3,UnsupportedVersionError,False,False
+F,version,8,4,4,4,UnsupportedVersionError,False,False
+F,version,8,5,4,5,UnsupportedVersionError,False,False
+F,version,8,6,4,6,UnsupportedVersionError,False,False
+F,version,8,7,4,7,UnsupportedVersionError,False,False
+F,configuration,8,0,5,0,UnsupportedSuiteError,False,False
+F,configuration,8,1,5,1,UnsupportedSuiteError,False,False
+F,configuration,8,2,5,2,UnsupportedSuiteError,False,False
+F,configuration,8,3,5,3,UnsupportedSuiteError,False,False
+F,configuration,8,4,5,4,UnsupportedSuiteError,False,False
+F,configuration,8,5,5,5,UnsupportedSuiteError,False,False
+F,configuration,8,6,5,6,UnsupportedSuiteError,False,False
+F,configuration,8,7,5,7,UnsupportedSuiteError,False,False
+F,flags and reserved,16,0,6,0,EnvelopeFormatError,False,False
+F,flags and reserved,16,1,6,1,EnvelopeFormatError,False,False
+F,flags and reserved,16,2,6,2,EnvelopeFormatError,False,False
+F,flags and reserved,16,3,6,3,EnvelopeFormatError,False,False
+F,flags and reserved,16,4,6,4,EnvelopeFormatError,False,False
+F,flags and reserved,16,5,6,5,EnvelopeFormatError,False,False
+F,flags and reserved,16,6,6,6,EnvelopeFormatError,False,False
+F,flags and reserved,16,7,6,7,EnvelopeFormatError,False,False
+F,flags and reserved,16,8,7,0,EnvelopeFormatError,False,False
+F,flags and reserved,16,9,7,1,EnvelopeFormatError,False,False
+F,flags and reserved,16,10,7,2,EnvelopeFormatError,False,False
+F,flags and reserved,16,11,7,3,EnvelopeFormatError,False,False
+F,flags and reserved,16,12,7,4,EnvelopeFormatError,False,False
+F,flags and reserved,16,13,7,5,EnvelopeFormatError,False,False
+F,flags and reserved,16,14,7,6,EnvelopeFormatError,False,False
+F,flags and reserved,16,15,7,7,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,0,8,0,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,1,8,1,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,2,8,2,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,3,8,3,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,4,8,4,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,5,8,5,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,6,8,6,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,7,8,7,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,8,9,0,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,9,9,1,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,10,9,2,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,11,9,3,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,12,9,4,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,13,9,5,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,14,9,6,EnvelopeFormatError,False,False
+F,KEM ciphertext length,16,15,9,7,EnvelopeFormatError,False,False
+F,KEM ciphertext,12544,0,1023,7,DecryptionError,False,False
+F,KEM ciphertext,12544,1,864,6,DecryptionError,False,False
+F,KEM ciphertext,12544,2,500,7,DecryptionError,False,False
+F,KEM ciphertext,12544,3,251,3,DecryptionError,False,False
+F,KEM ciphertext,12544,4,1073,1,DecryptionError,False,False
+F,KEM ciphertext,12544,5,1364,4,DecryptionError,False,False
+F,KEM ciphertext,12544,6,773,0,DecryptionError,False,False
+F,KEM ciphertext,12544,7,717,7,DecryptionError,False,False
+F,KEM ciphertext,12544,8,1405,2,DecryptionError,False,False
+F,KEM ciphertext,12544,9,299,1,DecryptionError,False,False
+F,KEM ciphertext,12544,10,1090,2,DecryptionError,False,False
+F,KEM ciphertext,12544,11,629,6,DecryptionError,False,False
+F,KEM ciphertext,12544,12,775,3,DecryptionError,False,False
+F,KEM ciphertext,12544,13,1040,6,DecryptionError,False,False
+F,KEM ciphertext,12544,14,1062,0,DecryptionError,False,False
+F,KEM ciphertext,12544,15,1092,6,DecryptionError,False,False
+F,KEM ciphertext,12544,16,1273,2,DecryptionError,False,False
+F,KEM ciphertext,12544,17,290,5,DecryptionError,False,False
+F,KEM ciphertext,12544,18,1517,1,DecryptionError,False,False
+F,KEM ciphertext,12544,19,555,6,DecryptionError,False,False
+F,HKDF salt length,8,0,1578,0,EnvelopeFormatError,False,False
+F,HKDF salt length,8,1,1578,1,EnvelopeFormatError,False,False
+F,HKDF salt length,8,2,1578,2,EnvelopeFormatError,False,False
+F,HKDF salt length,8,3,1578,3,EnvelopeFormatError,False,False
+F,HKDF salt length,8,4,1578,4,EnvelopeFormatError,False,False
+F,HKDF salt length,8,5,1578,5,EnvelopeFormatError,False,False
+F,HKDF salt length,8,6,1578,6,EnvelopeFormatError,False,False
+F,HKDF salt length,8,7,1578,7,EnvelopeFormatError,False,False
+F,HKDF salt,256,0,1604,4,DecryptionError,False,False
+F,HKDF salt,256,1,1591,4,DecryptionError,False,False
+F,HKDF salt,256,2,1608,7,DecryptionError,False,False
+F,HKDF salt,256,3,1602,1,DecryptionError,False,False
+F,HKDF salt,256,4,1605,5,DecryptionError,False,False
+F,HKDF salt,256,5,1603,4,DecryptionError,False,False
+F,HKDF salt,256,6,1606,5,DecryptionError,False,False
+F,HKDF salt,256,7,1608,2,DecryptionError,False,False
+F,HKDF salt,256,8,1606,1,DecryptionError,False,False
+F,HKDF salt,256,9,1600,7,DecryptionError,False,False
+F,HKDF salt,256,10,1594,2,DecryptionError,False,False
+F,HKDF salt,256,11,1584,2,DecryptionError,False,False
+F,HKDF salt,256,12,1608,0,DecryptionError,False,False
+F,HKDF salt,256,13,1607,2,DecryptionError,False,False
+F,HKDF salt,256,14,1582,3,DecryptionError,False,False
+F,HKDF salt,256,15,1599,3,DecryptionError,False,False
+F,HKDF salt,256,16,1601,5,DecryptionError,False,False
+F,HKDF salt,256,17,1586,1,DecryptionError,False,False
+F,HKDF salt,256,18,1596,4,DecryptionError,False,False
+F,HKDF salt,256,19,1583,7,DecryptionError,False,False
+F,commitment length,8,0,1611,0,EnvelopeFormatError,False,False
+F,commitment length,8,1,1611,1,EnvelopeFormatError,False,False
+F,commitment length,8,2,1611,2,EnvelopeFormatError,False,False
+F,commitment length,8,3,1611,3,EnvelopeFormatError,False,False
+F,commitment length,8,4,1611,4,EnvelopeFormatError,False,False
+F,commitment length,8,5,1611,5,EnvelopeFormatError,False,False
+F,commitment length,8,6,1611,6,EnvelopeFormatError,False,False
+F,commitment length,8,7,1611,7,EnvelopeFormatError,False,False
+F,key commitment,256,0,1631,3,DecryptionError,False,False
+F,key commitment,256,1,1638,2,DecryptionError,False,False
+F,key commitment,256,2,1633,3,DecryptionError,False,False
+F,key commitment,256,3,1622,7,DecryptionError,False,False
+F,key commitment,256,4,1615,6,DecryptionError,False,False
+F,key commitment,256,5,1629,6,DecryptionError,False,False
+F,key commitment,256,6,1629,2,DecryptionError,False,False
+F,key commitment,256,7,1632,4,DecryptionError,False,False
+F,key commitment,256,8,1624,1,DecryptionError,False,False
+F,key commitment,256,9,1642,5,DecryptionError,False,False
+F,key commitment,256,10,1641,1,DecryptionError,False,False
+F,key commitment,256,11,1636,0,DecryptionError,False,False
+F,key commitment,256,12,1626,2,DecryptionError,False,False
+F,key commitment,256,13,1617,2,DecryptionError,False,False
+F,key commitment,256,14,1628,4,DecryptionError,False,False
+F,key commitment,256,15,1641,0,DecryptionError,False,False
+F,key commitment,256,16,1638,4,DecryptionError,False,False
+F,key commitment,256,17,1633,5,DecryptionError,False,False
+F,key commitment,256,18,1637,6,DecryptionError,False,False
+F,key commitment,256,19,1636,4,DecryptionError,False,False
+F,scrypt identifier and parameters,32,0,1644,3,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,1,1647,4,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,2,1645,2,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,3,1645,7,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,4,1647,0,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,5,1646,1,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,6,1646,6,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,7,1647,7,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,8,1646,5,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,9,1646,0,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,10,1645,6,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,11,1647,1,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,12,1644,6,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,13,1647,6,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,14,1645,5,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,15,1645,4,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,16,1644,1,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,17,1647,2,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,18,1646,4,UnsupportedParameterError,False,False
+F,scrypt identifier and parameters,32,19,1646,3,UnsupportedParameterError,False,False
+F,password salt length,8,0,1648,0,EnvelopeFormatError,False,False
+F,password salt length,8,1,1648,1,EnvelopeFormatError,False,False
+F,password salt length,8,2,1648,2,EnvelopeFormatError,False,False
+F,password salt length,8,3,1648,3,EnvelopeFormatError,False,False
+F,password salt length,8,4,1648,4,EnvelopeFormatError,False,False
+F,password salt length,8,5,1648,5,EnvelopeFormatError,False,False
+F,password salt length,8,6,1648,6,EnvelopeFormatError,False,False
+F,password salt length,8,7,1648,7,EnvelopeFormatError,False,False
+F,password salt,128,0,1658,3,DecryptionError,False,False
+F,password salt,128,1,1661,4,DecryptionError,False,False
+F,password salt,128,2,1654,5,DecryptionError,False,False
+F,password salt,128,3,1659,0,DecryptionError,False,False
+F,password salt,128,4,1654,3,DecryptionError,False,False
+F,password salt,128,5,1664,5,DecryptionError,False,False
+F,password salt,128,6,1652,2,DecryptionError,False,False
+F,password salt,128,7,1651,0,DecryptionError,False,False
+F,password salt,128,8,1655,4,DecryptionError,False,False
+F,password salt,128,9,1662,6,DecryptionError,False,False
+F,password salt,128,10,1652,7,DecryptionError,False,False
+F,password salt,128,11,1655,5,DecryptionError,False,False
+F,password salt,128,12,1654,2,DecryptionError,False,False
+F,password salt,128,13,1656,0,DecryptionError,False,False
+F,password salt,128,14,1662,7,DecryptionError,False,False
+F,password salt,128,15,1658,5,DecryptionError,False,False
+F,password salt,128,16,1657,7,DecryptionError,False,False
+F,password salt,128,17,1663,3,DecryptionError,False,False
+F,password salt,128,18,1650,6,DecryptionError,False,False
+F,password salt,128,19,1657,6,DecryptionError,False,False
+F,nonce length,8,0,1665,0,EnvelopeFormatError,False,False
+F,nonce length,8,1,1665,1,EnvelopeFormatError,False,False
+F,nonce length,8,2,1665,2,EnvelopeFormatError,False,False
+F,nonce length,8,3,1665,3,EnvelopeFormatError,False,False
+F,nonce length,8,4,1665,4,EnvelopeFormatError,False,False
+F,nonce length,8,5,1665,5,EnvelopeFormatError,False,False
+F,nonce length,8,6,1665,6,EnvelopeFormatError,False,False
+F,nonce length,8,7,1665,7,EnvelopeFormatError,False,False
+F,nonce,96,0,1675,6,DecryptionError,False,False
+F,nonce,96,1,1668,2,DecryptionError,False,False
+F,nonce,96,2,1667,3,DecryptionError,False,False
+F,nonce,96,3,1671,1,DecryptionError,False,False
+F,nonce,96,4,1676,2,DecryptionError,False,False
+F,nonce,96,5,1670,4,DecryptionError,False,False
+F,nonce,96,6,1668,5,DecryptionError,False,False
+F,nonce,96,7,1667,1,DecryptionError,False,False
+F,nonce,96,8,1670,5,DecryptionError,False,False
+F,nonce,96,9,1669,4,DecryptionError,False,False
+F,nonce,96,10,1673,7,DecryptionError,False,False
+F,nonce,96,11,1677,5,DecryptionError,False,False
+F,nonce,96,12,1667,6,DecryptionError,False,False
+F,nonce,96,13,1668,6,DecryptionError,False,False
+F,nonce,96,14,1668,1,DecryptionError,False,False
+F,nonce,96,15,1670,7,DecryptionError,False,False
+F,nonce,96,16,1669,2,DecryptionError,False,False
+F,nonce,96,17,1670,0,DecryptionError,False,False
+F,nonce,96,18,1675,1,DecryptionError,False,False
+F,nonce,96,19,1671,7,DecryptionError,False,False
+F,ciphertext length,64,0,1683,3,EnvelopeFormatError,False,False
+F,ciphertext length,64,1,1682,1,EnvelopeFormatError,False,False
+F,ciphertext length,64,2,1680,6,LengthLimitError,False,False
+F,ciphertext length,64,3,1684,4,EnvelopeFormatError,False,False
+F,ciphertext length,64,4,1681,6,LengthLimitError,False,False
+F,ciphertext length,64,5,1685,1,EnvelopeFormatError,False,False
+F,ciphertext length,64,6,1678,1,LengthLimitError,False,False
+F,ciphertext length,64,7,1679,7,LengthLimitError,False,False
+F,ciphertext length,64,8,1681,1,LengthLimitError,False,False
+F,ciphertext length,64,9,1682,6,LengthLimitError,False,False
+F,ciphertext length,64,10,1678,5,LengthLimitError,False,False
+F,ciphertext length,64,11,1679,5,LengthLimitError,False,False
+F,ciphertext length,64,12,1678,0,LengthLimitError,False,False
+F,ciphertext length,64,13,1682,0,EnvelopeFormatError,False,False
+F,ciphertext length,64,14,1680,3,LengthLimitError,False,False
+F,ciphertext length,64,15,1683,6,EnvelopeFormatError,False,False
+F,ciphertext length,64,16,1685,3,EnvelopeFormatError,False,False
+F,ciphertext length,64,17,1678,6,LengthLimitError,False,False
+F,ciphertext length,64,18,1683,7,EnvelopeFormatError,False,False
+F,ciphertext length,64,19,1684,1,EnvelopeFormatError,False,False

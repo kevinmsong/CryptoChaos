@@ -24,12 +24,18 @@ All runs used one Windows 11 laptop: Intel Core i7-11800H (8 cores, 16 threads),
 | Run | Content |
 |---|---|
 | Principal (`results/principal`) | 800 DIV2K images × 5 repeats × 6 configurations (24,000 timed round trips), cold provisioning, stage microbenchmarks, size scaling (1 KiB–16 MiB), scrypt cost sensitivity (log2 N = 14, 16, 18), memory, 3,750 rejection trials, key-sensitivity test, descriptive diagnostics and SP 800-22 subset on every image and configuration, 1,350 calibration streams, exhaustive map analysis |
+| Supplementary (`results/supplement`) | Process cold start in fresh processes, header serialization and parsing, and single-bit header tampering stratified by header field |
 | GPU (`results/gpu`) | Diagnostic kernels, 1–256 MiB, GeForce RTX 5060 Ti, torch 2.15.0+cu132, triton-windows 3.9.0 |
 
 During the timing-sensitive passes of the principal run the cloud-sync client was stopped and an
 unrelated workload was suspended. Background services kept running, and their load is recorded once
 per second. The principal run was restarted once after an operating-system reboot interrupted its
-scaling pass; the interrupted run was not analyzed (`docs/methodology.md`, section 11).
+scaling pass; the interrupted run was not analyzed (`docs/methodology.md`, section 11). During the
+supplementary run the unrelated workload was again suspended, but the cloud-sync client and other
+background programs kept running (median total CPU load 27%, including the run's own processes;
+`results/supplement/raw/load.csv`). Its header timings therefore vary more from batch to batch than
+the principal run's stage timings (interquartile range about 40% of the median against 2–7%); its
+parse medians are 4–13% below the principal run's parse-stage medians, which time single calls.
 
 ## Limitations
 

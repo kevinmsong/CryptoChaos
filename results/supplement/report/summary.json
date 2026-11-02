@@ -1,0 +1,178 @@
+{
+ "cold_start": {
+  "A": {
+   "n": 10,
+   "import_ms": 120.8024,
+   "setup_ms": 0.01815,
+   "seal1_ms": 1.30145,
+   "seal2_ms": 0.28225,
+   "open1_ms": 0.2867,
+   "open2_ms": 0.1356,
+   "process_ms": 207.2298,
+   "first_seal_extra_ms": 1.01365
+  },
+  "B": {
+   "n": 10,
+   "import_ms": 119.74955,
+   "setup_ms": 0.019,
+   "seal1_ms": 1.46875,
+   "seal2_ms": 0.43865,
+   "open1_ms": 0.4392,
+   "open2_ms": 0.29115,
+   "process_ms": 206.6806,
+   "first_seal_extra_ms": 1.02785
+  },
+  "C": {
+   "n": 10,
+   "import_ms": 121.7824,
+   "setup_ms": 10.2903,
+   "seal1_ms": 0.5624,
+   "seal2_ms": 0.3847,
+   "open1_ms": 0.4416,
+   "open2_ms": 0.2569,
+   "process_ms": 220.90285,
+   "first_seal_extra_ms": 0.17735
+  },
+  "D": {
+   "n": 10,
+   "import_ms": 120.25265,
+   "setup_ms": 10.0921,
+   "seal1_ms": 0.6108,
+   "seal2_ms": 0.42545,
+   "open1_ms": 0.46005,
+   "open2_ms": 0.29305,
+   "process_ms": 217.75905,
+   "first_seal_extra_ms": 0.17225
+  },
+  "E": {
+   "n": 10,
+   "import_ms": 121.52095,
+   "setup_ms": 10.3259,
+   "seal1_ms": 36.95885,
+   "seal2_ms": 36.4902,
+   "open1_ms": 36.54795,
+   "open2_ms": 36.5134,
+   "process_ms": 365.26155,
+   "first_seal_extra_ms": 0.3804
+  },
+  "F": {
+   "n": 10,
+   "import_ms": 120.63805,
+   "setup_ms": 10.4235,
+   "seal1_ms": 37.08025,
+   "seal2_ms": 36.7639,
+   "open1_ms": 36.7597,
+   "open2_ms": 36.65415,
+   "process_ms": 364.6603,
+   "first_seal_extra_ms": 0.16895
+  }
+ },
+ "serialization": {
+  "A": {
+   "encode_us": 0.698,
+   "parse_us": 3.676
+  },
+  "B": {
+   "encode_us": 0.703,
+   "parse_us": 3.663
+  },
+  "C": {
+   "encode_us": 1.678,
+   "parse_us": 6.326
+  },
+  "D": {
+   "encode_us": 1.691,
+   "parse_us": 6.312
+  },
+  "E": {
+   "encode_us": 1.988,
+   "parse_us": 8.198
+  },
+  "F": {
+   "encode_us": 2.001,
+   "parse_us": 8.134
+  }
+ },
+ "tampering": {
+  "A": {
+   "trials": 100,
+   "rejected": 100,
+   "fields": 7,
+   "outcomes": [
+    "DecryptionError",
+    "EnvelopeFormatError",
+    "LengthLimitError",
+    "UnsupportedSuiteError",
+    "UnsupportedVersionError"
+   ]
+  },
+  "B": {
+   "trials": 100,
+   "rejected": 100,
+   "fields": 7,
+   "outcomes": [
+    "DecryptionError",
+    "EnvelopeFormatError",
+    "LengthLimitError",
+    "UnsupportedSuiteError",
+    "UnsupportedVersionError"
+   ]
+  },
+  "C": {
+   "trials": 192,
+   "rejected": 192,
+   "fields": 13,
+   "outcomes": [
+    "DecryptionError",
+    "EnvelopeFormatError",
+    "LengthLimitError",
+    "UnsupportedSuiteError",
+    "UnsupportedVersionError"
+   ]
+  },
+  "D": {
+   "trials": 192,
+   "rejected": 192,
+   "fields": 13,
+   "outcomes": [
+    "DecryptionError",
+    "EnvelopeFormatError",
+    "LengthLimitError",
+    "UnsupportedSuiteError",
+    "UnsupportedVersionError"
+   ]
+  },
+  "E": {
+   "trials": 240,
+   "rejected": 240,
+   "fields": 16,
+   "outcomes": [
+    "DecryptionError",
+    "EnvelopeFormatError",
+    "LengthLimitError",
+    "UnsupportedParameterError",
+    "UnsupportedSuiteError",
+    "UnsupportedVersionError"
+   ]
+  },
+  "F": {
+   "trials": 240,
+   "rejected": 240,
+   "fields": 16,
+   "outcomes": [
+    "DecryptionError",
+    "EnvelopeFormatError",
+    "LengthLimitError",
+    "UnsupportedParameterError",
+    "UnsupportedSuiteError",
+    "UnsupportedVersionError"
+   ]
+  }
+ },
+ "tampering_distinct_flips": 1064,
+ "load": {
+  "samples": 16,
+  "cpu_percent_total_median": 27.049999999999997,
+  "cpu_percent_total_p90": 35.25
+ }
+}

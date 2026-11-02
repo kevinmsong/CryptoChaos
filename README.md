@@ -62,6 +62,11 @@ laptop ([results/principal](results/principal)).
   control D accepts a different, colliding passphrase.
 - **Randomness tests**: 431 of 38,400 SP 800-22 results rejected at α = 0.01 (1.12%, 95% CI
   1.02–1.23%), not distinguishable from uniform ChaCha20 calibration streams (0.975%, Fisher p = 0.26).
+- **Supplementary run** ([results/supplement](results/supplement)): all 1,064 single-bit header flips
+  (every bit of each one- or two-byte field and 20 distinct random bits of each longer field, in every
+  configuration) were rejected without releasing plaintext. In a fresh process the first seal took a
+  median 0.17–1.03 ms longer than the second for A–D; scrypt dominates E and F. Median header encoding
+  took 0.7–2.0 µs and parsing 3.7–8.2 µs per call.
 
 The configuration without the chaotic value (E) is the recommended way to bind a passphrase.
 Limitations: [docs/limitations.md](docs/limitations.md). Component-level security notes:
