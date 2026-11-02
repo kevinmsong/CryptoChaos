@@ -1,0 +1,6 @@
+kind,streams,tests_rejecting_all,max_rejection_rate,distinct_streams
+biased_0.502,50.0,0.0,0.92,50
+biased_0.51,50.0,2.0,1.0,50
+lcg_low_bit,50.0,6.0,1.0,2
+legacy_logistic,50.0,5.0,1.0,50
+repeated_block,50.0,4.0,1.0,50

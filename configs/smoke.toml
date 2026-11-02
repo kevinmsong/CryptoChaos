@@ -1,0 +1,60 @@
+# Correctness smoke run: every pass at minimal size on two real images plus synthetic payloads.
+# Not a publication run; results are written under runs/ (git-ignored).
+
+[experiment]
+name = "smoke"
+description = "Fail-fast correctness smoke run (all passes, minimal sizes)"
+seed = 20261101
+output_root = "runs"
+prevent_sleep = false
+
+[dataset]
+manifest = "configs/manifests/div2k_train_hr.csv"
+selection = "first:2"
+
+[timing]
+repeats = 2
+warmup_messages = 2
+
+[diagnostics]
+workers = 2
+
+[auth]
+trials_per_class = 3
+
+[key_sensitivity]
+images = 1
+synthetic_bytes = 65536
+
+[stages]
+repeats = 5
+reference_repeats = 2
+scrypt_log2_n = [14]
+scrypt_repeats = 2
+
+[scaling]
+sizes = [1024, 65536, 1048576]
+repeats = [4, 3, 2]
+cold_repeats_max = 2
+
+[kdf_sensitivity]
+log2_n = [14, 15]
+repeats = 2
+
+[memory]
+payload_bytes = [1048576]
+include_median_image = true
+repeats = 1
+operations = 1
+
+[calibration]
+uniform_streams = 8
+positive_control_streams = 2
+negative_control_streams = 2
+workers = 2
+
+[map_analysis]
+v2_reduced_bits_1d = [8, 12]
+v2_reduced_bits_henon = [8]
+v2_samples = 4
+v2_cycle_search_steps = 4096

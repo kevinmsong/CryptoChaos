@@ -1,0 +1,8 @@
+{
+ "streams": 1350,
+ "expected_rows": 1350,
+ "rows": 1350,
+ "missing_rows": 0,
+ "elapsed_s": 95.2,
+ "finished_at_utc": "2026-11-01T09:28:24Z"
+}

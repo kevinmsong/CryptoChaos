@@ -1,0 +1,98 @@
+[
+ {
+  "case": "random-1",
+  "n": 1,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-2",
+  "n": 2,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-3",
+  "n": 3,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-255",
+  "n": 255,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-256",
+  "n": 256,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-257",
+  "n": 257,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-65535",
+  "n": 65535,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-65536",
+  "n": 65536,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-65537",
+  "n": 65537,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-196625",
+  "n": 196625,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "random-1000003",
+  "n": 1000003,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "zeros-vs-ff",
+  "n": 262149,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "ff-vs-zeros",
+  "n": 262149,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "ramp-vs-ramp",
+  "n": 262149,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "ramp-vs-reversed",
+  "n": 262149,
+  "hist_equal": true,
+  "diffs_equal": true
+ },
+ {
+  "case": "alternating",
+  "n": 262148,
+  "hist_equal": true,
+  "diffs_equal": true
+ }
+]

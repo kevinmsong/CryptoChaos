@@ -1,0 +1,101 @@
+{
+ "captured_at_utc": "2026-11-01T08:54:09Z",
+ "platform": "Windows-11-10.0.26300-SP0",
+ "machine": "AMD64",
+ "cpu": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+ "cpu_physical_cores": 8,
+ "cpu_logical_cores": 16,
+ "cpu_freq_mhz": {
+  "current": 2304.0,
+  "max": 2304.0
+ },
+ "ram_bytes": 68500381696,
+ "perf_counter": {
+  "implementation": "QueryPerformanceCounter()",
+  "resolution_s": 1e-07
+ },
+ "power": {
+  "on_ac_power": true,
+  "battery_percent": 94,
+  "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)"
+ },
+ "gpu": {
+  "nvidia_smi": "C:\\WINDOWS\\system32\\nvidia-smi.EXE",
+  "gpus": [
+   {
+    "index": "0",
+    "name": "NVIDIA T1200 Laptop GPU",
+    "driver": "621.01",
+    "memory": "4096 MiB",
+    "pci_bus": "00000000:01:00.0",
+    "compute_cap": "7.5"
+   },
+   {
+    "index": "1",
+    "name": "NVIDIA GeForce RTX 5060 Ti",
+    "driver": "621.01",
+    "memory": "16311 MiB",
+    "pci_bus": "00000000:52:00.0",
+    "compute_cap": "12.0"
+   }
+  ],
+  "torch": {
+   "unavailable": "ModuleNotFoundError: No module named 'torch'"
+  },
+  "cuda_driver": "621.01\n621.01",
+  "triton": "unavailable: ModuleNotFoundError"
+ },
+ "source": {
+  "git_commit": "711dbf825d389ea3f1fcba6d9f8e1540b09fee43",
+  "git_dirty": false,
+  "dirty_patch_sha256": null,
+  "package_source_sha256": "bed2bd88e43738860270fc8d782bc164da2bd9fcccff730c5ea0d77d9a5cc5d1",
+  "measurement_source_sha256": "0e45a7814aef5de414e9f75a6993bc86f1332626d1c7a060978f86098f06952e"
+ },
+ "backends": {
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "python_openssl": "OpenSSL 3.0.21 9 Jun 2026",
+  "packages": {
+   "cryptography": "50.0.2",
+   "pqcrypto": "1.0.0",
+   "kyber-py": "1.2.0",
+   "blake3": "1.0.8",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1",
+   "pandas": "3.1.0",
+   "pillow": "13.0.0",
+   "matplotlib": "3.11.2",
+   "psutil": "7.2.2",
+   "pytest": "9.2.0",
+   "torch": null,
+   "triton-windows": null,
+   "triton": null
+  },
+  "kem_backends": {
+   "openssl": {
+    "backend": "openssl",
+    "parameter_set": "ML-KEM-1024",
+    "library": "cryptography",
+    "library_version": "50.0.2",
+    "implementation": "OpenSSL 4.0.3 29 Sep 2026",
+    "secret_key_format": "seed64"
+   },
+   "pqcrypto": {
+    "backend": "pqcrypto",
+    "parameter_set": "ML-KEM-1024",
+    "library": "pqcrypto",
+    "library_version": "1.0.0",
+    "implementation": "Rust crate backbone-ml-kem 0.2.0 via PyO3 (per bundled CycloneDX SBOM)",
+    "secret_key_format": "expanded3168"
+   },
+   "kyber-py": {
+    "backend": "kyber-py",
+    "parameter_set": "ML-KEM-1024",
+    "library": "kyber-py",
+    "library_version": "1.2.0",
+    "implementation": "pure-Python FIPS 203 reference (not constant-time; reference use only)",
+    "secret_key_format": "expanded3168"
+   }
+  }
+ }
+}

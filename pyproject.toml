@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptochaos"
+version = "2.0.0"
+description = "Reproducible evaluation of passphrase-bound ML-KEM-1024/AEAD envelopes with optional deterministic chaotic diversification (CryptoChaos)."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Kevin Song" }, { name = "Allan C. Dobbins" }]
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "cryptography>=50.0.2,<51",  # ML-KEM-1024 (OpenSSL), AES-GCM, ChaCha20-Poly1305, HKDF, scrypt
+    "pqcrypto==1.0.0",           # secondary native ML-KEM-1024 backend (cross-checks)
+    "kyber-py==1.2.0",           # pure-Python FIPS 203 reference backend (KATs only, never timed as primary)
+    "blake3>=1.0.8,<2",
+    "numpy>=2.1",
+    "scipy>=1.14",
+    "pandas>=2.2",
+    "pillow>=11",
+    "matplotlib>=3.9",
+    "psutil>=7",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3"]
+gpu = [
+    "torch>=2.8",
+    "triton-windows>=3.4; sys_platform == 'win32'",
+    "triton>=3.4; sys_platform == 'linux'",
+]
+
+[project.scripts]
+cryptochaos = "cryptochaos.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cryptochaos = ["data/*.json", "data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "slow: long-running checks; they run by default (deselect with -m \"not slow\")",
+    "gpu: requires a CUDA GPU with the optional [gpu] extra",
+    "dataset: requires the DIV2K dataset (CRYPTOCHAOS_DIV2K_PATH)",
+]

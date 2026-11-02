@@ -1,0 +1,433 @@
+{
+ "legacy": {
+  "logistic": {
+   "seeds": 256,
+   "distinct_outputs": 113,
+   "shannon_bits": 6.708869824168044,
+   "min_entropy_bits": 4.830074998557688,
+   "collision_probability": 0.010955810546875,
+   "graph": {
+    "states": 256,
+    "cycles": 4,
+    "cycle_lengths": {
+     "1": 1,
+     "2": 1,
+     "4": 1,
+     "10": 1
+    },
+    "longest_cycle": 10,
+    "states_on_cycles": 17,
+    "max_transient": 17,
+    "mean_transient": 5.56640625,
+    "mean_rho_length": 11.7578125
+   }
+  },
+  "chebyshev": {
+   "seeds": 256,
+   "distinct_outputs": 165,
+   "shannon_bits": 7.079879063559691,
+   "min_entropy_bits": 4.540568381362703,
+   "collision_probability": 0.01007080078125,
+   "graph": {
+    "states": 256,
+    "cycles": 2,
+    "cycle_lengths": {
+     "1": 2
+    },
+    "longest_cycle": 1,
+    "states_on_cycles": 2,
+    "max_transient": 26,
+    "mean_transient": 9.33203125,
+    "mean_rho_length": 10.33203125
+   }
+  },
+  "tent": {
+   "seeds": 256,
+   "distinct_outputs": 128,
+   "shannon_bits": 7.0,
+   "min_entropy_bits": 7.0,
+   "collision_probability": 0.0078125,
+   "graph": {
+    "states": 256,
+    "cycles": 1,
+    "cycle_lengths": {
+     "1": 1
+    },
+    "longest_cycle": 1,
+    "states_on_cycles": 1,
+    "max_transient": 8,
+    "mean_transient": 7.00390625,
+    "mean_rho_length": 8.00390625
+   },
+   "all_zero_from_byte": 8
+  },
+  "henon": {
+   "seeds": 65536,
+   "distinct_outputs": 19456,
+   "shannon_bits": 14.233458593344352,
+   "min_entropy_bits": 14.0,
+   "collision_probability": 5.245208740234375e-05,
+   "graph": {
+    "states": 65536,
+    "cycles": 4,
+    "cycle_lengths": {
+     "1": 2,
+     "26": 1,
+     "70": 1
+    },
+    "longest_cycle": 70,
+    "states_on_cycles": 98,
+    "max_transient": 94,
+    "mean_transient": 28.689483642578125,
+    "mean_rho_length": 94.40229797363281
+   }
+  },
+  "joint": {
+   "seed_bits": 40,
+   "distinct_chaotic_keys": 46432911360,
+   "log2_distinct": 35.43442869010459,
+   "shannon_bits_uniform_seed": 35.02220748107209,
+   "min_entropy_bits_uniform_seed": 30.37064337992039,
+   "collision_probability": 4.5212791843773914e-11,
+   "expected_random_passphrases_to_first_collision": 186392.86162787653,
+   "note": "Upper bounds on the diversity of the v1 passphrase-derived value; BLAKE3 assumed collision-free."
+  },
+  "collision_search": {
+   "passphrase_pattern": "cryptochaos-demo-<i>",
+   "searched": 2065868,
+   "distinct_seed_key_collision": {
+    "passphrases": [
+     "cryptochaos-demo-12996",
+     "cryptochaos-demo-49085"
+    ],
+    "found_after": 49086,
+    "seeds": [
+     "7719f4cbf9",
+     "8ca6f4ccfc"
+    ],
+    "verified": true
+   },
+   "identical_seed_collision": {
+    "passphrases": [
+     "cryptochaos-demo-1791738",
+     "cryptochaos-demo-2065867"
+    ],
+    "found_after": 2065868,
+    "seed": "d4c17a7245",
+    "verified": true
+   }
+  }
+ },
+ "v2_reduced": {
+  "8": {
+   "logistic": {
+    "graph": {
+     "states": 256,
+     "cycles": 3,
+     "cycle_lengths": {
+      "1": 1,
+      "4": 1,
+      "10": 1
+     },
+     "longest_cycle": 10,
+     "states_on_cycles": 15,
+     "max_transient": 15,
+     "mean_transient": 5.65234375,
+     "mean_rho_length": 12.125
+    },
+    "seeds": 256,
+    "distinct_outputs": 14,
+    "shannon_bits": 3.506842289014749,
+    "min_entropy_bits": 2.642447995381916,
+    "collision_probability": 0.104400634765625
+   },
+   "tent": {
+    "graph": {
+     "states": 256,
+     "cycles": 5,
+     "cycle_lengths": {
+      "1": 2,
+      "3": 1,
+      "6": 1,
+      "7": 1
+     },
+     "longest_cycle": 7,
+     "states_on_cycles": 18,
+     "max_transient": 28,
+     "mean_transient": 10.578125,
+     "mean_rho_length": 16.359375
+    },
+    "seeds": 256,
+    "distinct_outputs": 28,
+    "shannon_bits": 4.229408228620768,
+    "min_entropy_bits": 3.0,
+    "collision_probability": 0.071533203125
+   },
+   "chebyshev": {
+    "graph": {
+     "states": 256,
+     "cycles": 4,
+     "cycle_lengths": {
+      "2": 1,
+      "10": 3
+     },
+     "longest_cycle": 10,
+     "states_on_cycles": 32,
+     "max_transient": 14,
+     "mean_transient": 4.84375,
+     "mean_rho_length": 14.78125
+    },
+    "seeds": 256,
+    "distinct_outputs": 32,
+    "shannon_bits": 4.75123358074695,
+    "min_entropy_bits": 3.678071905112638,
+    "collision_probability": 0.04241943359375
+   }
+  },
+  "12": {
+   "logistic": {
+    "graph": {
+     "states": 4096,
+     "cycles": 3,
+     "cycle_lengths": {
+      "1": 1,
+      "3": 1,
+      "4": 1
+     },
+     "longest_cycle": 4,
+     "states_on_cycles": 8,
+     "max_transient": 140,
+     "mean_transient": 80.045166015625,
+     "mean_rho_length": 84.03759765625
+    },
+    "seeds": 4096,
+    "distinct_outputs": 250,
+    "shannon_bits": 7.474254826931219,
+    "min_entropy_bits": 5.6249605686530755,
+    "collision_probability": 0.006960511207580566
+   },
+   "tent": {
+    "graph": {
+     "states": 4096,
+     "cycles": 4,
+     "cycle_lengths": {
+      "1": 2,
+      "2": 1,
+      "6": 1
+     },
+     "longest_cycle": 6,
+     "states_on_cycles": 10,
+     "max_transient": 111,
+     "mean_transient": 58.2490234375,
+     "mean_rho_length": 64.240234375
+    },
+    "seeds": 4096,
+    "distinct_outputs": 363,
+    "shannon_bits": 7.789363942198529,
+    "min_entropy_bits": 5.192645077942396,
+    "collision_probability": 0.006976127624511719
+   },
+   "chebyshev": {
+    "graph": {
+     "states": 4096,
+     "cycles": 5,
+     "cycle_lengths": {
+      "2": 2,
+      "12": 2,
+      "70": 1
+     },
+     "longest_cycle": 70,
+     "states_on_cycles": 98,
+     "max_transient": 69,
+     "mean_transient": 18.439453125,
+     "mean_rho_length": 46.19140625
+    },
+    "seeds": 4096,
+    "distinct_outputs": 336,
+    "shannon_bits": 7.552069342397896,
+    "min_entropy_bits": 5.154509949055625,
+    "collision_probability": 0.008525848388671875
+   }
+  },
+  "16": {
+   "logistic": {
+    "graph": {
+     "states": 65536,
+     "cycles": 7,
+     "cycle_lengths": {
+      "1": 1,
+      "3": 1,
+      "4": 1,
+      "9": 1,
+      "34": 1,
+      "109": 1,
+      "253": 1
+     },
+     "longest_cycle": 253,
+     "states_on_cycles": 413,
+     "max_transient": 223,
+     "mean_transient": 59.995941162109375,
+     "mean_rho_length": 236.4442138671875
+    },
+    "seeds": 65536,
+    "distinct_outputs": 4316,
+    "shannon_bits": 11.408542174922243,
+    "min_entropy_bits": 8.476438043942988,
+    "collision_probability": 0.0005454081110656261
+   },
+   "tent": {
+    "graph": {
+     "states": 65536,
+     "cycles": 9,
+     "cycle_lengths": {
+      "1": 2,
+      "4": 2,
+      "12": 1,
+      "42": 1,
+      "124": 1,
+      "191": 1,
+      "192": 1
+     },
+     "longest_cycle": 192,
+     "states_on_cycles": 571,
+     "max_transient": 343,
+     "mean_transient": 116.13597106933594,
+     "mean_rho_length": 290.92771911621094
+    },
+    "seeds": 65536,
+    "distinct_outputs": 8097,
+    "shannon_bits": 12.576005800484653,
+    "min_entropy_bits": 10.245112497836532,
+    "collision_probability": 0.00020600296556949615
+   },
+   "chebyshev": {
+    "graph": {
+     "states": 65536,
+     "cycles": 5,
+     "cycle_lengths": {
+      "2": 1,
+      "6": 1,
+      "169": 2,
+      "222": 1
+     },
+     "longest_cycle": 222,
+     "states_on_cycles": 568,
+     "max_transient": 150,
+     "mean_transient": 33.77557373046875,
+     "mean_rho_length": 217.81085205078125
+    },
+    "seeds": 65536,
+    "distinct_outputs": 4928,
+    "shannon_bits": 11.26453373803652,
+    "min_entropy_bits": 7.590609063862298,
+    "collision_probability": 0.0008656177669763565
+   }
+  },
+  "20": {
+   "logistic": {
+    "graph": {
+     "states": 1048576,
+     "cycles": 4,
+     "cycle_lengths": {
+      "1": 1,
+      "12": 1,
+      "141": 1,
+      "989": 1
+     },
+     "longest_cycle": 989,
+     "states_on_cycles": 1143,
+     "max_transient": 1257,
+     "mean_transient": 431.55934619903564,
+     "mean_rho_length": 1050.8655080795288
+    }
+   },
+   "tent": {
+    "graph": {
+     "states": 1048576,
+     "cycles": 8,
+     "cycle_lengths": {
+      "1": 3,
+      "3": 1,
+      "39": 1,
+      "63": 1,
+      "399": 1,
+      "556": 1
+     },
+     "longest_cycle": 556,
+     "states_on_cycles": 1063,
+     "max_transient": 1787,
+     "mean_transient": 832.4613676071167,
+     "mean_rho_length": 1242.4523572921753
+    }
+   },
+   "chebyshev": {
+    "graph": {
+     "states": 1048576,
+     "cycles": 6,
+     "cycle_lengths": {
+      "2": 1,
+      "10": 3,
+      "40": 1,
+      "1382": 1
+     },
+     "longest_cycle": 1382,
+     "states_on_cycles": 1454,
+     "max_transient": 667,
+     "mean_transient": 178.5534381866455,
+     "mean_rho_length": 1548.9073085784912
+    }
+   }
+  }
+ },
+ "v2_reduced_henon": {
+  "8": {
+   "graph": {
+    "states": 65536,
+    "cycles": 4,
+    "cycle_lengths": {
+     "2": 1,
+     "10": 1,
+     "24": 1,
+     "40": 1
+    },
+    "longest_cycle": 40,
+    "states_on_cycles": 76,
+    "max_transient": 52,
+    "mean_transient": 13.77252197265625,
+    "mean_rho_length": 44.085662841796875
+   },
+   "seeds": 65536,
+   "distinct_outputs": 418,
+   "shannon_bits": 7.272774084854462,
+   "min_entropy_bits": 5.547758759569182,
+   "collision_probability": 0.00950075313448906
+  },
+  "10": {
+   "graph": {
+    "states": 1048576,
+    "cycles": 5,
+    "cycle_lengths": {
+     "1": 2,
+     "2": 1,
+     "8": 1,
+     "70": 1
+    },
+    "longest_cycle": 70,
+    "states_on_cycles": 82,
+    "max_transient": 141,
+    "mean_transient": 44.9670467376709,
+    "mean_rho_length": 114.13212871551514
+   }
+  }
+ },
+ "v2_full_width": {
+  "samples": 100,
+  "steps_searched": 65536,
+  "orbits_cycling_within_limit": {
+   "logistic": 0,
+   "tent": 0,
+   "chebyshev": 0,
+   "henon": 0
+  }
+ }
+}

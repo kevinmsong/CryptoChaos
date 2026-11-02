@@ -1,0 +1,69 @@
+{
+ "identity": {
+  "config_sha256": "194676d43afa8150405bd74758d1e19f9fdf7fe0965849a948c28054f91b1057",
+  "measurement_source_sha256": "0e45a7814aef5de414e9f75a6993bc86f1332626d1c7a060978f86098f06952e",
+  "data": {
+   "manifest_sha256": "b258dcc8045a85c45e19b7846fc8a7268dc0a4ba11bf9175e64762935b89f147",
+   "selection": "5ba96f69802e3ff7364c1ab5710c9581c237b4499bbfa368861ae2454b65ccc2"
+  },
+  "kem_backend": {
+   "backend": "openssl",
+   "parameter_set": "ML-KEM-1024",
+   "library": "cryptography",
+   "library_version": "50.0.2",
+   "implementation": "OpenSSL 4.0.3 29 Sep 2026",
+   "secret_key_format": "seed64"
+  },
+  "libraries": {
+   "cryptography": "50.0.2",
+   "pqcrypto": "1.0.0",
+   "kyber-py": "1.2.0",
+   "blake3": "1.0.8",
+   "numpy": "2.5.4",
+   "scipy": "1.18.1"
+  },
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]"
+ },
+ "started_at_utc": "2026-11-01T08:54:09Z",
+ "config_source": {
+  "path": "configs/principal.toml",
+  "sha256": "10dd927cbe24df51514e36a325ce6cf73a0cd4f62137916149fb6087b927148a"
+ },
+ "source": {
+  "git_commit": "711dbf825d389ea3f1fcba6d9f8e1540b09fee43",
+  "git_dirty": false,
+  "dirty_patch_sha256": null,
+  "package_source_sha256": "bed2bd88e43738860270fc8d782bc164da2bd9fcccff730c5ea0d77d9a5cc5d1",
+  "measurement_source_sha256": "0e45a7814aef5de414e9f75a6993bc86f1332626d1c7a060978f86098f06952e"
+ },
+ "process_priority": "normal",
+ "finished_at_utc": "2026-11-01T09:43:52Z",
+ "resumed_at_utc": [
+  "2026-11-01T08:58:48Z",
+  "2026-11-01T08:58:49Z",
+  "2026-11-01T09:26:49Z"
+ ],
+ "relabels": [
+  {
+   "at_utc": "2026-11-01T14:30:07Z",
+   "change": "experiment.name renamed to 'principal' after the run finished; output directory renamed to match",
+   "unchanged": "raw/, status/, environment.json, and every measured value",
+   "previous_config_sha256": "78ec06bce7e8434a7ddec082a59989ec9d3d5b11e3ed4372c9737a1209f5c786",
+   "previous_config_source_sha256": "0dc9b5cffc00b56a58548aa2c24635ba337c7b25b881ea2ebf40b52a9be20746"
+  },
+  {
+   "at_utc": "2026-11-02T13:10:09Z",
+   "change": "experiment.output_root changed from results/v2 to results; output directory moved to match",
+   "unchanged": "raw/, status/, environment.json, and every measured value",
+   "previous_config_sha256": "23bab42aa968a191c29469a6ec66c0c3e116d80c7fa15ab12e517aeb9d36ed6f",
+   "previous_config_source_sha256": "22f091a7dbdc6e9b5281cfbad7f883847019c5f13b0cac88833bc58ba59dad81"
+  },
+  {
+   "at_utc": "2026-11-02T13:53:04Z",
+   "change": "first-line comment of config.toml reworded to match configs/principal.toml; no setting changed",
+   "unchanged": "raw/, status/, environment.json, config.effective.json, and every measured value",
+   "previous_config_sha256": "194676d43afa8150405bd74758d1e19f9fdf7fe0965849a948c28054f91b1057",
+   "previous_config_source_sha256": "52b69f7fb6161541818cca6a215fa51d15a0d5306e1cb52ee3af10f6c6554d01"
+  }
+ ]
+}

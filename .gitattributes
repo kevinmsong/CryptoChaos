@@ -1,0 +1,3 @@
+# Published runs are covered by byte-level SHA-256 sums (results/*/SHA256SUMS, checked by
+# `cryptochaos verify-artifact`): store and check out their exact bytes on every platform.
+results/** -text

@@ -1,0 +1,85 @@
+# Principal CryptoChaos study (prespecified; see docs/methodology.md).
+# All 800 DIV2K training HR images, suites A-F, warm-recipient and cold-provisioning workloads.
+# Run:  python -m cryptochaos benchmark --config configs/principal.toml [--resume]
+
+[experiment]
+name = "principal"
+description = "Principal study: 800 DIV2K images x 5 repeats x 6 suites plus scaling, KDF sensitivity, memory, calibration, diagnostics"
+seed = 20261101  # orders work and generates synthetic payloads only; never cryptographic randomness
+output_root = "results"
+# timing-type passes first; parallel CPU-heavy passes (calibration, diagnostics) last so they never overlap timing
+passes = ["environment", "map_analysis", "auth", "key_sensitivity", "stages", "timing", "scaling",
+          "kdf_sensitivity", "memory", "calibration", "diagnostics"]
+process_priority = "normal"
+prevent_sleep = true
+
+[dataset]
+manifest = "configs/manifests/div2k_train_hr.csv"
+selection = "all"
+verify = "decoded_hash"
+
+[protocol]
+suites = ["A", "B", "C", "D", "E", "F"]
+kem_backend = "openssl"
+scrypt_log2_n = 14
+aad = "CryptoChaos-v2 benchmark"
+
+[timing]
+repeats = 5
+warmup_messages = 8
+warmup_payload_bytes = 1048576
+password_policy = "per_message"
+cold_provisioning = true
+shuffle = true
+load_sample_interval_s = 1.0
+
+[diagnostics]
+workers = 12
+sample_bits = 1000000
+lags = [1, 2, 3]
+include_plaintext = true
+
+[auth]
+trials_per_class = 50
+
+[key_sensitivity]
+images = 50
+synthetic_bytes = 1048576
+
+[stages]
+repeats = 300
+kem_backends = ["openssl", "pqcrypto", "kyber-py"]
+reference_repeats = 20
+payload_bytes = 1048576
+scrypt_log2_n = [14, 16, 18]
+scrypt_repeats = 20
+
+[scaling]
+sizes = [1024, 16384, 65536, 262144, 1048576, 4194304, 16777216]
+repeats = [400, 300, 200, 100, 60, 30, 15]
+policies = ["per_message", "session"]
+cold_repeats_max = 50
+
+[kdf_sensitivity]
+log2_n = [14, 16, 18]
+repeats = 30
+payload_bytes = 1048576
+
+[memory]
+payload_bytes = [1048576, 16777216]
+include_median_image = true
+repeats = 5
+operations = 3
+
+[calibration]
+uniform_streams = 1000
+positive_control_streams = 100
+negative_control_streams = 50
+workers = 12
+n_bits = 1000000
+
+[map_analysis]
+v2_reduced_bits_1d = [8, 12, 16, 20]
+v2_reduced_bits_henon = [8, 10]
+v2_samples = 100
+v2_cycle_search_steps = 65536

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv*/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local-only experiment output (published runs are committed under results/)
+runs/
+tmp/
+tests/.cache/
+
+# Third-party reference implementations fetched/built locally for validation
+third_party/
+
+# Logs
+*.log
+
+# Local OS files
+*.lnk
+desktop.ini
+Thumbs.db
